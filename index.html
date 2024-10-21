@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>positivus</title>
+        <!---------------custom css link------------------------>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!------------------------------------favicon--------------------------->
+        <link rel="shortcut icon" href="assets/images/png/fav.png" type="image/x-icon">
+        <!---------------------------slider link--------------------------------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <!---------------------------------tailwind link-------------------->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!--------------------------custom root----------------------------->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        container: {
+                            center: true,
+                            padding: "20px",
+                            screens: {
+                                sm: "640px",
+                                md: "768px",
+                                lg: "1024px",
+                                xl: "1140px",
+                                '2xl': "1422",
+                            },
+                        },
+                        fontSize: {
+                            "custom-sm": "22.22px",
+                            "custom-md": "26.67px",
+                            "custom-lg": "44.44px",
+                            "custom-xl": "62.22px",
+                            "custom-lg": "111.11px",
+                            "custom-xl": "122.22px",
+                            "custom-xxl": "133.33px",
+                        },
+                        colors: {
+                            "orange": "#e09b6b",
+                            "green": "#1d4734",
+                        },
+                        lineHeight: {
+                            "custom-base": "110%",
+                            "custom-lg": "120%",
+                            "custom-xl": "150%",
+                        },
+                        fontFamily: {
+                            "sans": ["helvetica"],
+                            "sofia-sans": ["sofia"],
+                            "satoshi-sans": ["satoshi"],
+                            "inter-sans": ["Plus Jakarta Sans", 'sans - serif'],
+                            "plus-sans": ["Inter", 'sans-serif'],
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+
+    <body>
+        <!--------------------------slider script link------------------------------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <!------------------------js link--------------------------->
+            <script src="assets/js/app.js"></script>
+    </body>
+
+</html>
