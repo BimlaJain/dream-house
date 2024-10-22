@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>positivus</title>
+    <!---------------custom css link------------------------>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!------------------------------------favicon--------------------------->
+    <link rel="shortcut icon" href="assets/images/png/fav.png" type="image/x-icon">
+    <!---------------------------slider link--------------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!---------------------------------tailwind link-------------------->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--------------------------custom root----------------------------->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: {
+                        center: true,
+                        padding: "20px",
+                        screens: {
+                            sm: "640px",
+                            md: "768px",
+                            lg: "1024px",
+                            xl: "1140px",
+                            '2xl': "1422px",
+                        },
+                    },
+                    fontSize: {
+                        "custom-sm": "22.22px",
+                        "custom-md": "26.67px",
+                        "custom-lg": "44.44px",
+                        "custom-2lg": "62.22px",
+                        "custom-xl": "111.11px",
+                        "custom-2xl": "122.22px",
+                        "custom-xxl": "133.33px",
+                    },
+                    colors: {
+                        "orange": "#e09b6b",
+                        "green": "#1d4734",
+                    },
+                    lineHeight: {
+                        "custom-base": "110%",
+                        "custom-lg": "120%",
+                        "custom-xl": "150%",
+                    },
+                    fontFamily: {
+                        "sans": ["helvetica"],
+                        "sofia-sans": ["sofia"],
+                        "satoshi-sans": ["satoshi"],
+                        "inter-sans": ["Plus Jakarta Sans", 'sans - serif'],
+                        "plus-sans": ["Inter", 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            display: none !important;
+        }
+
+        .swiper-button-next svg,
+        .swiper-button-prev svg {
+            width: 35% !important;
+            height: 35% !important;
+        }
+
+        .mySwiper2.swiper {
+            overflow: visible !important;
+            margin-left: 9px;
+        }
+
+        #quality .swiper-slide {
+            filter: blur(7px);
+            width: 500px;
+        }
+
+        #quality .swiper-slide img:not(.arrow-img) {
+            width: 547px;
+        }
+
+        #quality .swiper-slide-active {
+            filter: blur(0px);
+        }
+
+        #quality .swiper-slide-active img:not(.arrow-img) {
+            width: 632px;
+        }
+    </style>
+</head>
+
+<body>
+    <!----------------------PROJECT SECTION--------------------------->
+    <section id="project"
+        class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover bg-no-repeat lg:pt-20 md:pt-12 pt-8">
+        <div class="container">
+            <div class="flex justify-between items-center flex-wrap">
+                <div class="flex items-center gap-7">
+                    <img src="./assets/images/png/star-circle.png" alt="" class="md:size-[122px] size-[95px]">
+                    <h2
+                        class="font-medium lg:text-custom-lg text-white md:leading-custom-lg md:text-4xl sm:text-3xl text-3xl">
+                        The Project</h2>
+                </div>
+                <p
+                    class="font-medium md:text-xl text-lg !leading-custom-xl text-white max-w-[480px] max-sm:pt-5 max-sm:text-center">
+                    Together, we can conquer
+                    challenges, utilize
+                    our strengths, and achieve remarkable success in this ambitious home
+                    project.</p>
+            </div>
+            <div class="swiper mySwiper lg:pt-16 pt-8 lg:pb-11 pb-7">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/images/png/swimming-pool-img.png" alt=""
+                            class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[200px] lg:h-[451px] md:h-[260px] mx-auto">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./assets/images/png/swimming-pool-img.png" alt=""
+                            class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[200px] lg:h-[451px] md:h-[260px] mx-auto">
+                    </div>
+                </div>
+                <div class="flex slick-arrow-buttons gap-3 lg:py-16 py-8 mx-3 relative">
+                    <button
+                        class="swiper-button-prev absolute bottom-[30%] lg:left-[43%] md:left-[40%] left-[28%] border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 ">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.1514 16.7069C9.76092 17.0974 9.12775 17.0974 8.73723 16.7069L2.73723 10.7069C2.34671 10.3163 2.34671 9.68317 2.73723 9.29265L8.73723 3.29265C9.12775 2.90212 9.76092 2.90212 10.1514 3.29265C10.542 3.68317 10.542 4.31634 10.1514 4.70686L5.85855 8.99976L17.4443 8.99976C17.9966 8.99976 18.4443 9.44747 18.4443 9.99976C18.4443 10.552 17.9966 10.9998 17.4443 10.9998L5.85855 10.9998L10.1514 15.2926C10.542 15.6832 10.542 16.3163 10.1514 16.7069Z"
+                                fill="white" />
+                        </svg>
+
+                    </button>
+                    <button
+                        class="swiper-button-next absolute bottom-[30%] lg:left-[51%] left-[52%] border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 ">
+                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M10.8486 3.29289C11.2391 2.90237 11.8722 2.90237 12.2628 3.29289L18.2628 9.29289C18.6533 9.68342 18.6533 10.3166 18.2628 10.7071L12.2628 16.7071C11.8722 17.0976 11.2391 17.0976 10.8486 16.7071C10.458 16.3166 10.458 15.6834 10.8486 15.2929L15.1414 11L3.55566 11C3.00338 11 2.55566 10.5523 2.55566 10C2.55566 9.44771 3.00338 9 3.55566 9L15.1414 9L10.8486 4.70711C10.458 4.31658 10.458 3.68342 10.8486 3.29289Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!----------------------QUALITY SECTION--------------------------->
+    <section id="quality"
+        class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover bg-no-repeat overflow-hidden pb-11 lg:pt-24 md:pt-16 pt-8 -mt-1">
+        <div class="container">
+            <div class="flex justify-between flex-wrap">
+                <div class="flex-col">
+                    <div class="flex items-center gap-7 xl:pb-36 pb-8">
+                        <img src="./assets/images/png/star-circle.png" alt="" class="md:size-[122px] size-[95px]">
+                        <h2
+                            class="font-medium lg:text-custom-lg text-white md:leading-custom-lg md:text-2xl sm:text-2xl text-2xl">
+                            Our Quality</h2>
+                    </div>
+                    <h2
+                        class="font-bold pb-7 uppercase lg:text-7xl md:text-5xl text-4xl bg-gradient-to-br from-white via-white to-transparent bg-clip-text text-transparent max-w-[570px] leading-custom-base">
+                        Design a cozy and fresh interior.</h2>
+                    <p class="max-w-[453px] font-medium md:text-xl text-base text-[#A0A0A0] lg:pb-16 pb-4">Crafting an
+                        Inviting
+                        Haven:
+                        Unveiling the
+                        Art of Designing a Cozy and Fresh Interior for Unmatched Comfort and Serenity</p>
+                    <button
+                        class="py-5 px-10 text-green bg-orange rounded-[111px] xl:mb-0 mb-10 font-medium text-base !leading-5">Get
+                        Started</button>
+                </div>
+                <div class="swiper mySwiper2 lg:max-w-[636px] md:max-w-[545px] max-w-[270px] m-auto pb-5 xl:pt-32 pt-0">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide relative ">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] md:max-w-[400px] max-w-[200px] image">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <img src="./assets/images/png/table-img.png" alt=""
+                                class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px]">
+                            <div
+                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                <img src="./assets/images/png/arrow-img.png" alt=""
+                                    class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------slider script link------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!------------------------js link--------------------------->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
