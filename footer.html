@@ -72,9 +72,9 @@
 
 <body>
     <!-------------ABOUT US---------------->
-    <section class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-12 pb-20">
+    <section class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-12 lg:pb-20 md:pb-16 pb-12">
         <div class="container">
-            <div class="flex xl:justify-between pb-[181px] flex-wrap justify-center">
+            <div class="flex xl:justify-between lg:pb-[181px] md:pb-28 sm:pb-20 pb-16 flex-wrap justify-center">
                 <div class="flex-col">
                     <div class="flex gap-[26px] justify-center">
                         <img src="assets/images/png/star-circle.png" alt="star" class="size-[122px]">
@@ -150,9 +150,9 @@
                 </div>
                 <!-- Background image -->
                 <img id="dream-image" src="assets/images/png/dream-house-image.png" alt="Dream House"
-                    class="!max-w-[1380px] object-cover rounded-2xl relative pb-28">
+                    class="xl:!max-w-[1380px] lg:max-w-[980px] md:max-w-[700px]  max-md:w-[590px] object-cover rounded-2xl relative lg:pb-28 pb-24 ">
                 <img src="assets/images/png/dream-house-layer.png" alt="layer"
-                    class="absolute top-[28%] max-w-[1355px] left-[1%]">
+                    class="absolute sm:top-[28%] top-[20%] xl:max-w-[1355px] lg:max-w-[960px] md:max-w-[690px] max-md:w-[450px] sm:left-[1%] left-[0]">
                 <!-- Video element (hidden initially) -->
                 <video id="dream-video"
                     class=" inset-0 !w-[1380px] !h-[656px] mx-auto object-cover rounded-full hidden relative pb-20"
@@ -164,7 +164,7 @@
                 <!-- Play Button (SVG) -->
                 <div class="absolute inset-0 flex items-center justify-center top-[-20%]">
                     <button id="toggle-button" class=" p-4 rounded-full shadow-lg focus:outline-none">
-                        <svg width="112" height="112" viewBox="0 0 112 112" fill="none"
+                        <svg class="max-lg:w-8 max-lg:h-8" width="112" height="112" viewBox="0 0 112 112" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M100.445 56.5714C100.445 81.1174 80.5462 101.016 56.0001 101.016C31.4541 101.016 11.5557 81.1174 11.5557 56.5714C11.5557 32.0254 31.4541 12.127 56.0001 12.127C80.5462 12.127 100.445 32.0254 100.445 56.5714ZM71.039 56.2589C71.4094 56.0451 71.4094 55.5105 71.039 55.2966L48.8961 42.5125C48.5257 42.2986 48.0628 42.5659 48.0628 42.9936V68.562C48.0628 68.9896 48.5257 69.2569 48.8961 69.0431L71.039 56.2589Z"
@@ -175,7 +175,7 @@
                 </div>
                 <!-- Bottom text overlay -->
                 <div
-                    class="absolute bottom-0 left-0 right-0 bg-opacity-50 text-white text-center py-4 text-custom-xl leading-custom-xl font-normal uppercase font-satoshi-sans">
+                    class="absolute xl:bottom-0 lg:bottom-[5%] md:bottom-[11%] sm:bottom-[17%] bottom-[24%] left-0 right-0 bg-opacity-50 text-white text-center py-4 lg:text-custom-xl md:text-7xl sm:text-5xl text-3xl leading-custom-xl font-normal uppercase font-satoshi-sans">
                     DREAM HOUSE
                 </div>
             </div>
