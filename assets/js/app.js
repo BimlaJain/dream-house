@@ -3,8 +3,19 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    loop: true, // Enable infinite loop
+    loop: true,
+    speed: 900,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+    },
+    spaceBetween: 20,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
 });
+
 
 var swiper2 = new Swiper(".mySwiper2", {
     grabCursor: true,
@@ -15,8 +26,10 @@ var swiper2 = new Swiper(".mySwiper2", {
             translate: [0, 0, -400],
         },
         next: {
-            translate: ["60%", 0, 0],
+            translate: ["70%", 0, 0],
         },
     },
     loop: true,
+    slideToClickedSlide: true,
+    speed: 1000,
 });
