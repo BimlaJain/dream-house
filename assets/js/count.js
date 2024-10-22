@@ -33,17 +33,15 @@ document.getElementById('toggle-button').addEventListener('click', function () {
     var image = document.getElementById('dream-image');
     var video = document.getElementById('dream-video');
 
-    if (video.classList.contains('hidden')) {
-        // Hide image, show video
+    if (video.classList.contains('hidden')) {     
         image.classList.add('hidden');
         video.classList.remove('hidden');
-        video.play();  // Automatically play the video when shown
+        video.play();
     } else {
-        // Hide video, show image
         video.classList.add('hidden');
         image.classList.remove('hidden');
-        video.pause(); // Pause the video when hidden
-        video.currentTime = 0; // Reset video time
+        video.pause(); 
+        video.currentTime = 0;
     }
 });
 
