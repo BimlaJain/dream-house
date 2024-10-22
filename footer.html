@@ -61,7 +61,7 @@
                         "plus-sans": ["Plus Jakarta Sans",],
                         "inter-sans": ["Inter", 'sans-serif'],
                     },
-                     backgroundImage: {
+                    backgroundImage: {
                         'text-gradient': 'linear-gradient(99.73deg, #FFFFFF 42.68%, rgba(255, 255, 255, 0) 103.89%)',
                     },
                 },
@@ -151,22 +151,26 @@
                 <!-- Background image -->
                 <img id="dream-image" src="assets/images/png/dream-house-image.png" alt="Dream House"
                     class="!max-w-[1380px] object-cover rounded-2xl relative pb-28">
-                <img src="assets/images/png/dream-house-layer.png" alt="layer" class="absolute top-[28%] max-w-[1355px] left-[1%]">
+                <img src="assets/images/png/dream-house-layer.png" alt="layer"
+                    class="absolute top-[28%] max-w-[1355px] left-[1%]">
                 <!-- Video element (hidden initially) -->
-                <video id="dream-video" class=" inset-0 !w-[1380px] !h-[656px] mx-auto object-cover rounded-full hidden relative pb-20"
+                <video id="dream-video"
+                    class=" inset-0 !w-[1380px] !h-[656px] mx-auto object-cover rounded-full hidden relative pb-20"
                     controls>
                     <!-- Add this valid video source -->
                     <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <!-- Play Button (SVG) -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <button id="toggle-button" class="bg-white p-4 rounded-full shadow-lg focus:outline-none">
-                        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-800"
-                            fill="black" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="" stroke-linejoin="" stroke-width="2"
-                                d="M14.752 11.168l-5.197-2.598A1 1 0 008 9.401v5.197a1 1 0 001.555.832l5.197-2.598a1 1 0 000-1.664z" />
+                <div class="absolute inset-0 flex items-center justify-center top-[-20%]">
+                    <button id="toggle-button" class=" p-4 rounded-full shadow-lg focus:outline-none">
+                        <svg width="112" height="112" viewBox="0 0 112 112" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M100.445 56.5714C100.445 81.1174 80.5462 101.016 56.0001 101.016C31.4541 101.016 11.5557 81.1174 11.5557 56.5714C11.5557 32.0254 31.4541 12.127 56.0001 12.127C80.5462 12.127 100.445 32.0254 100.445 56.5714ZM71.039 56.2589C71.4094 56.0451 71.4094 55.5105 71.039 55.2966L48.8961 42.5125C48.5257 42.2986 48.0628 42.5659 48.0628 42.9936V68.562C48.0628 68.9896 48.5257 69.2569 48.8961 69.0431L71.039 56.2589Z"
+                                fill="white" />
                         </svg>
+
                     </button>
                 </div>
                 <!-- Bottom text overlay -->
@@ -186,7 +190,8 @@
                 class="text-gray max-w-[585px] mx-auto text-center font-medium text-custom-md leading-custom-xl font-sofia-sans">
                 We take great pride in ensuring the satisfaction of our customers, which</p>
             <div class="flex gap-[26px] justify-center pt-[26px] pb-[61px]">
-                <a href="https://www.facebook.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                <a class="rounded-full transition-all hover:p-4 duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+                    href="https://www.facebook.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8298)">
                             <path
@@ -201,7 +206,8 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                <a class="rounded-full transition-all hover:p-4 duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+                    href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8300)">
                             <path
@@ -216,7 +222,8 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                <a class="rounded-full hover:p-4 transition-all duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+                    href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8302)">
                             <path
@@ -237,7 +244,8 @@
                         </defs>
                     </svg>
                 </a>
-                <a href="https://in.linkedin.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                <a class="rounded-full transition-all hover:p-4 duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+                    href="https://in.linkedin.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8307)">
                             <path
