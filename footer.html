@@ -61,6 +61,9 @@
                         "plus-sans": ["Plus Jakarta Sans",],
                         "inter-sans": ["Inter", 'sans-serif'],
                     },
+                     backgroundImage: {
+                        'text-gradient': 'linear-gradient(99.73deg, #FFFFFF 42.68%, rgba(255, 255, 255, 0) 103.89%)',
+                    },
                 },
             },
         };
@@ -93,7 +96,7 @@
                 </div>
                 <div class="flex-col">
                     <h2
-                        class="max-w-[816px]  lg:text-7xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 max-xl:text-center bg-gradient-to-br from-white via-white to-transparent bg-clip-text text-transparent">
+                        class="max-w-[816px]  lg:text-7xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 max-xl:text-center bg-text-gradient bg-clip-text text-transparent">
                         We've found luxury homes for clients for a decade</h2>
                     <p
                         class="text-gray max-w-[710px] font-sofia-sans md:text-xl text-lg leading-custom-xl pb-[53px] font-medium max-xl:text-center max-xl:mx-auto">
@@ -141,20 +144,21 @@
                 </div>
             </div>
             <!----------VIDEO PART------------->
-           <div class="relative w-full overflow-hidden rounded-2xl shadow-lg ">
-            <div
-                class="bg-[url('assets/images/png/dream-house-image.png')] bg-cover bg-no-repeat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            </div>               
+            <div class="relative w-full overflow-hidden rounded-2xl shadow-lg ">
+                <div
+                    class="bg-[url('assets/images/png/dream-house-image.png')] bg-cover bg-no-repeat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                </div>
                 <!-- Background image -->
                 <img id="dream-image" src="assets/images/png/dream-house-image.png" alt="Dream House"
-                    class="!max-w-[1380px] object-cover rounded-2xl">
-
+                    class="!max-w-[1380px] object-cover rounded-2xl relative pb-28">
+                <img src="assets/images/png/dream-house-layer.png" alt="layer" class="absolute top-[28%] max-w-[1355px] left-[1%]">
                 <!-- Video element (hidden initially) -->
-            <video id="dream-video" class=" inset-0 !w-[1780px] !h-[556px] mx-auto object-cover rounded-full hidden" controls>
-                <!-- Add this valid video source -->
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+                <video id="dream-video" class=" inset-0 !w-[1380px] !h-[656px] mx-auto object-cover rounded-full hidden relative pb-20"
+                    controls>
+                    <!-- Add this valid video source -->
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <!-- Play Button (SVG) -->
                 <div class="absolute inset-0 flex items-center justify-center">
                     <button id="toggle-button" class="bg-white p-4 rounded-full shadow-lg focus:outline-none">
@@ -167,7 +171,7 @@
                 </div>
                 <!-- Bottom text overlay -->
                 <div
-                    class="absolute bottom-[-5%] left-0 right-0 bg-opacity-50 text-white text-center py-4 text-custom-xl leading-custom-xl font-normal uppercase font-satoshi-sans">
+                    class="absolute bottom-0 left-0 right-0 bg-opacity-50 text-white text-center py-4 text-custom-xl leading-custom-xl font-normal uppercase font-satoshi-sans">
                     DREAM HOUSE
                 </div>
             </div>
