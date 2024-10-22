@@ -46,3 +46,4 @@ document.getElementById('toggle-button').addEventListener('click', function () {
         video.currentTime = 0; // Reset video time
     }
 });
+
