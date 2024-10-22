@@ -29,15 +29,20 @@ $(window).scroll(function () {
 });
 
 
-    const image = document.getElementById('dream-image');
-    const video = document.getElementById('dream-video');
-    const playButton = document.getElementById('toggle-button');
-    
-    playButton.addEventListener('click', () => {
-        if (video.classList.contains('hidden')) {
-        // Hide the image and show the video
+document.getElementById('toggle-button').addEventListener('click', function () {
+    var image = document.getElementById('dream-image');
+    var video = document.getElementById('dream-video');
+
+    if (video.classList.contains('hidden')) {
+        // Hide image, show video
         image.classList.add('hidden');
-    video.classList.remove('hidden');
-    video.play();
-        }
-    });
+        video.classList.remove('hidden');
+        video.play();  // Automatically play the video when shown
+    } else {
+        // Hide video, show image
+        video.classList.add('hidden');
+        image.classList.remove('hidden');
+        video.pause(); // Pause the video when hidden
+        video.currentTime = 0; // Reset video time
+    }
+});
