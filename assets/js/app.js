@@ -1,16 +1,22 @@
-// $(document).ready(function () {
-//     $('.single-item').slick({
-//         prevArrow: $('.slick-prev'), // Custom previous button
-//         nextArrow: $('.slick-next'), // Custom next button
-//     });
-// });
 var swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    loop: true, // Enable infinite loop
 });
-// var swiper = new Swiper(".mySwiper", {
-//     effect: "cards",
-//     grabCursor: true,
-// });
+
+var swiper2 = new Swiper(".mySwiper2", {
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            shadow: false,
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["60%", 0, 0],
+        },
+    },
+    loop: true,
+});
