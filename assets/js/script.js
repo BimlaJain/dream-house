@@ -63,7 +63,7 @@ const closeIcon = document.getElementById('close-icon');
 menuBtn.addEventListener('click', () => {
     // Toggle the mobile menu visibility
     const isMenuOpen = !mobileMenu.classList.contains('hidden'); // Check if the menu is already open
-    
+
     if (isMenuOpen) {
         // If the menu is open, close it and show the hamburger icon
         mobileMenu.classList.add('hidden');   // Hide the menu
