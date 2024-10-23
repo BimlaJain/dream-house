@@ -54,10 +54,25 @@ function toggleDropdown(menuId) {
     }
 }
 
-// menu icon
 const menuBtn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu');
+const mobileMenu = document.getElementById('mobile-menu');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+const closeIcon = document.getElementById('close-icon');
 
+// Add event listener for the menu button
 menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
+    // Toggle the mobile menu visibility
+    const isMenuOpen = !mobileMenu.classList.contains('hidden'); // Check if the menu is already open
+    
+    if (isMenuOpen) {
+        // If the menu is open, close it and show the hamburger icon
+        mobileMenu.classList.add('hidden');   // Hide the menu
+        closeIcon.classList.add('hidden');    // Hide close icon
+        hamburgerIcon.classList.remove('hidden'); // Show hamburger icon
+    } else {
+        // If the menu is closed, open it and show the close icon
+        mobileMenu.classList.remove('hidden'); // Show the menu
+        hamburgerIcon.classList.add('hidden');  // Hide hamburger icon
+        closeIcon.classList.remove('hidden');   // Show close icon
+    }
 });
