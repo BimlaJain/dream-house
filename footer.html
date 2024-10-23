@@ -47,7 +47,6 @@
                         "orange": "#e09b6b",
                         "green": "#1d4734",
                         "gray": "#A0A0A0",
-
                     },
                     lineHeight: {
                         "custom-base": "110%",
@@ -63,6 +62,7 @@
                     },
                     backgroundImage: {
                         'text-gradient': 'linear-gradient(99.73deg, #FFFFFF 42.68%, rgba(255, 255, 255, 0) 103.89%)',
+                        'custom-gradient': 'linear-gradient(180deg, #FFFFFF 40.97%, #000000 193.92%)',
                     },
                 },
             },
@@ -72,30 +72,30 @@
 
 <body>
     <!-------------ABOUT US---------------->
-    <section class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-12 lg:pb-20 md:pb-16 pb-12">
+    <section class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-12 lg:pb-20 md:pb-16 pb-4">
         <div class="container">
-            <div class="flex xl:justify-between lg:pb-[181px] md:pb-28 sm:pb-20 pb-16 flex-wrap justify-center">
+            <div
+                class="flex xl:justify-between xl:pb-[181px] lg:pb-40 md:pb-28 sm:pb-20 pb-16 flex-wrap justify-center">
                 <div class="flex-col">
                     <div class="flex gap-[26px] justify-center">
-                        <img src="assets/images/png/star-circle.png" alt="star" class="size-[122px]">
+                        <img src="assets/images/png/star-circle.png" alt="star" class="md:size-[122px] size-[108px] pointer-events-none">
                         <p
                             class="font-medium text-white md:text-custom-lg text-2xl leading-custom-lg font-satoshi-sans text-center pt-[34px]">
                             About Us</p>
                     </div>
                     <p
-                        class="font-medium text-lg text-gray lg:max-w-[333px] xl:pt-[236px] pt-24 leading-custom-xl pb-4 max-xl:text-center font-sofia-sans">
+                        class="font-medium text-lg text-gray lg:max-w-[333px] xl:pt-[236px] lg:pt-20 md:pt-16 pt-12 leading-custom-xl pb-4 max-xl:text-center font-sofia-sans">
                         We take
                         great pride in ensuring the satisfaction of our customers. That's why we proudly
                         guarantee the quality and
                         reliability of our products.</p>
                     <button
-                        class="bg-orange py-5 px-[38px] rounded-full font-bold text-lg leading-custom-lg max-xl:mt-5 max-xl:mx-auto flex border-2 border-orange hover:bg-white transition-all duration-700">
-                        Get Started
-                    </button>
+                        class="max-xl:mt-5 max-xl:mx-auto flex font-bold text-lg leading-custom-lg py-5 px-[38px] hover:before:bg-white  rounded-full relative overflow-hidden border-2 border-orange bg-orange  text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full"><span
+                            class="relative z-10">Get Started</span></button>
                 </div>
                 <div class="flex-col">
                     <h2
-                        class="max-w-[816px]  lg:text-7xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 max-xl:text-center bg-text-gradient bg-clip-text text-transparent">
+                        class="max-w-[816px] lg:text-7xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 max-xl:text-center bg-text-gradient bg-clip-text text-transparent">
                         We've found luxury homes for clients for a decade</h2>
                     <p
                         class="text-gray max-w-[710px] font-sofia-sans md:text-xl text-lg leading-custom-xl pb-[53px] font-medium max-xl:text-center max-xl:mx-auto">
@@ -107,35 +107,31 @@
                     <div id="counter" class="flex lg:gap-20 sm:gap-14 gap-10 flex-wrap max-xl:justify-center">
                         <div class="flex-col relative">
                             <div class="flex gap-2">
-                                <p class="text-white font-bold font-helvetica-sans text-custom-2lg leading-custom-lg count"
+                                <p class="text-white font-bold font-helvetica-sans md:text-custom-2lg text-5xl leading-custom-lg count"
                                     data-count="10">0
-
                                 </p>
-                                <span class="text-6xl font-semibold text-orange leading-[110%]">+</span>
+                                <span class="md:text-6xl text-5xl font-semibold text-orange leading-[110%]">+</span>
                             </div>
                             <p class="font-medium text-xl leading-custom-lg text-gray pt-[13px] font-inter-sans">Awards
                                 Gained</p>
                         </div>
                         <div class="flex-col relative">
                             <div class="flex gap-2">
-                                <p class="text-white font-bold font-helvetica-sans text-custom-2lg leading-custom-lg count"
+                                <p class="text-white font-bold font-helvetica-sans md:text-custom-2lg text-5xl leading-custom-lg count"
                                     data-count="20">0
-
                                 </p>
-                                <span class="text-6xl font-semibold text-orange leading-[110%]">+</span>
+                                <span class="md:text-6xl text-5xl font-semibold text-orange leading-[110%]">+</span>
                             </div>
                             <p class="font-medium text-xl leading-custom-lg text-gray pt-[13px] font-inter-sans">Years
                                 of Experience</p>
                         </div>
                         <div class="flex-col relative">
                             <div class="flex gap-2">
-                                <p class="text-white font-bold font-helvetica-sans text-custom-2lg leading-custom-lg count"
+                                <p class="text-white font-bold font-helvetica-sans md:text-custom-2lg text-5xl leading-custom-lg count"
                                     data-count="598">0
-
                                 </p>
-                                <span class="text-6xl font-semibold text-orange leading-[110%]">+</span>
+                                <span class="md:text-6xl text-5xl font-semibold text-orange leading-[110%]">+</span>
                             </div>
-                            </p>
                             <p class="font-medium text-xl leading-custom-lg text-gray pt-[13px] font-inter-sans">Rented
                                 Home Stay</p>
                         </div>
@@ -148,7 +144,7 @@
                     class="bg-[url('assets/images/png/dream-house-image.png')] bg-cover bg-no-repeat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                 </div>
                 <img id="dream-image" src="assets/images/png/dream-house-image.png" alt="Dream House"
-                    class="xl:!max-w-[1380px] lg:max-w-[980px] md:max-w-[700px]  max-md:w-[590px] object-cover rounded-2xl relative lg:pb-28 pb-24 ">
+                    class="xl:!max-w-[1380px] lg:max-w-[980px] md:max-w-[700px] max-md:w-[590px] object-cover rounded-2xl relative lg:pb-28 pb-24 ">
                 <img src="assets/images/png/dream-house-layer.png" alt="layer"
                     class="absolute sm:top-[28%] top-[20%] xl:max-w-[1355px] lg:max-w-[960px] md:max-w-[690px] max-md:w-[450px] sm:left-[1%]left-[0]">
                 <video id="dream-video"
@@ -176,14 +172,15 @@
     </section>
 
     <!---------------FOOTER-------------->
-    <footer class="bg-green pt-16 pb-[62px]">
+    <footer class="bg-green lg:pt-16 md:pt-14 pt-12 md:pb-[62px] pb-12">
         <div class="container">
-            <img src="assets/images/png/footer-logo.png" alt="footer-logo" class="max-w-[240px] mx-auto pb-8">
+            <img src="assets/images/png/footer-logo.png" alt="footer-logo"
+                class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3 pointer-events-none">
             <p
-                class="text-gray max-w-[585px] mx-auto text-center font-medium text-custom-md leading-custom-xl font-sofia-sans">
+                class="text-gray max-w-[585px] mx-auto text-center font-medium lg:text-custom-md text-xl leading-custom-xl font-sofia-sans">
                 We take great pride in ensuring the satisfaction of our customers, which</p>
-            <div class="flex gap-[26px] justify-center pt-[26px] pb-[61px]">
-                <a class="rounded-full transition-all hover:p-4 duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+            <div class="flex gap-[26px] justify-center pt-[26px] md:pb-[61px] pb-10">
+                <a 
                     href="https://www.facebook.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8298)">
@@ -199,7 +196,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a class="rounded-full transition-all hover:p-4 duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+                <a 
                     href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8300)">
@@ -215,7 +212,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a class="rounded-full hover:p-4 transition-all duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+                <a 
                     href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8302)">
@@ -237,7 +234,7 @@
                         </defs>
                     </svg>
                 </a>
-                <a class="rounded-full transition-all hover:p-4 duration-500 hover:text-white hover:shadow-[0_0_15px#ffffff]"
+                <a 
                     href="https://in.linkedin.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_8307)">
@@ -255,7 +252,7 @@
                 </a>
             </div>
             <div class="border-b border-gray"></div>
-            <div class="flex  pt-9 justify-center flex-wrap">
+            <div class="flex pt-9 justify-center flex-wrap">
                 <a href=""
                     class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none pr-10 lg:pr-[72px] font-plus-sans">HOME</a>
                 <a href=""
@@ -265,12 +262,12 @@
                 <a href=""
                     class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none px-10 lg:px-[72px] font-plus-sans max-sm:mt-5">BLOG</a>
                 <a href=""
-                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg  px-10 xl:mt-0 max-xl:mt-10 max-lg:mt-5 lg:px-[72px] font-plus-sans">PRICING</a>
+                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg px-10 xl:mt-0 max-xl:mt-10 max-lg:mt-5 lg:px-[72px] font-plus-sans">PRICING</a>
             </div>
         </div>
     </footer>
-  
-  <!--------------------------slider script link------------------------------->
+
+    <!--------------------------slider script link------------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>

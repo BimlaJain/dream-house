@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dream House</title>
+        <!---------------custom css link------------------------>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <!------------------------------------favicon--------------------------->
+        <link rel="shortcut icon" href="assets/images/png/fav.png" type="image/x-icon">
+        <!---------------------------slider link--------------------------------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+            integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+            integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!---------------------------------tailwind link-------------------->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!--------------------------custom root----------------------------->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        container: {
+                            center: true,
+                            padding: "20px",
+                            screens: {
+                                sm: "640px",
+                                md: "768px",
+                                lg: "1024px",
+                                xl: "1140px",
+                                '2xl': "1422px",
+                            },
+                        },
+                        fontSize: {
+                            "custom-sm": "22.22px",
+                            "custom-md": "26.67px",
+                            "custom-lg": "44.44px",
+                            "custom-2lg": "62.22px",
+                            "custom-xl": "111.11px",
+                            "custom-2xl": "122.22px",
+                            "custom-xxl": "133.33px",
+                        },
+                        colors: {
+                            "orange": "#e09b6b",
+                            "green": "#1d4734",
+                        },
+                        lineHeight: {
+                            "custom-base": "110%",
+                            "custom-lg": "120%",
+                            "custom-xl": "150%",
+                        },
+                        fontFamily: {
+                            "sans": ["helvetica"],
+                            "sofia-sans": ["sofia"],
+                            "satoshi-sans": ["satoshi"],
+                            "plus-sans": ["Plus Jakarta Sans", 'sans - serif'],
+                            "inter-sans": ["Inter", 'sans-serif'],
+                        },
+                        backgroundImage: {
+                            'text-gradient': 'linear-gradient(99.73deg, #FFFFFF 42.68%, rgba(255, 255, 255, 0) 103.89%)',
+                            'custom-gradient': 'linear-gradient(180deg, #FFFFFF 40.97%, #000000 193.92%)',
+                            'gradient-text': 'linear-gradient(112.84deg, #FFFFFF 55.43%, rgba(255, 255, 255, 0) 87.88%)',
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+
+    <body>
+        <!----------------------hero section----------------------------------->
+        <section class="pt-5 pb-24 bg-green relative xl:h-[931px] lg:h-[875px] sm:h-[656px] h-[550px]">
+            <div class="container">
+                <nav class="flex justify-between items-center">
+                    <a href="#"><img src="assets/images/png/logo.png" alt="logo" class="w-60 h-16"></a>
+                    <div class="lg:hidden">
+                        <button id="menu-btn" class="text-white focus:outline-none z-30 relative pr-4">
+                            <!-- Hamburger Icon (default) -->
+                            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                            <!-- Cross Icon (hidden by default) -->
+                            <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <ul class="lg:flex hidden space-x-4 bg-gray-100 p-2 rounded-full items-center">
+                        <!-- Home Button -->
+                        <li id="home-menu" class=" rounded-full active">
+                            <a href="#" onclick="activateMenu('home-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black hover:border">Home</a>
+                        </li>
+
+                        <!-- Properties Button -->
+                        <li id="properties-menu">
+                            <a href="#" onclick="activateMenu('properties-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black hover:border">
+                                Properties
+                            </a>
+                        </li>
+
+                        <!-- Dropdown for Buy -->
+                        <li id="buy-menu" class="relative">
+                            <button onclick="toggleDropdown('buy-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex items-center gap-1 focus:outline-none hover:border-black hover:border">
+                                Buy
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                        stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                            <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                <li><a href="#" onclick="activateMenu('buy-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                                <li><a href="#" onclick="activateMenu('buy-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                                <li><a href="#" onclick="activateMenu('buy-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Dropdown for Sell -->
+                        <li id="sell-menu" class="relative">
+                            <button onclick="toggleDropdown('sell-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                Sell
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                        stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                            <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                <li><a href="#" onclick="activateMenu('sell-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                                <li><a href="#" onclick="activateMenu('sell-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                                <li><a href="#" onclick="activateMenu('sell-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Dropdown for Rent -->
+                        <li id="rent-menu" class="relative">
+                            <button onclick="toggleDropdown('rent-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                Rent
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                        stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                            <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                <li><a href="#" onclick="activateMenu('rent-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                                <li><a href="#" onclick="activateMenu('rent-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                                <li><a href="#" onclick="activateMenu('rent-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="bg-gray-100 rounded-full p-2 px-4 lg:flex hidden justify-center items-center gap-3">
+                        <li
+                            class="font-medium font-sofia-sans text-lg leading-custom-lg text-black hover:bg-green hover:text-white py-3 rounded-full px-2 cursor-pointer">
+                            Login</li>
+                        <li
+                            class="font-medium font-sofia-sans text-lg leading-custom-lg hover:text-black bg-green hover:bg-gray-100 text-white py-3 px-4 rounded-full cursor-pointer">
+                            Get started</li>
+                    </ul>
+                    <div id="mobile-menu"
+                        class="hidden fixed inset-0 z-10 bg-green text-white flex flex-col items-center justify-center space-y-6 text-xl">
+                        <ul class=" space-x-4 p-2 rounded-full items-center">
+                            <li id="home-menu" class=" rounded-full active">
+                                <a href="#" onclick="activateMenu('home-menu')"
+                                    class="px-4 py-2 font-sofia-sans rounded-full text-white hover:border-black hover:border">Home</a>
+                            </li>
+
+                            <li id="properties-menu">
+                                <a href="#" onclick="activateMenu('properties-menu')"
+                                    class="px-4 py-2 font-sofia-sans rounded-full text-white focus:outline-none hover:border-black hover:border">
+                                    Properties
+                                </a>
+                            </li>
+                            <li id="buy-menu" class="relative">
+                                <button onclick="toggleDropdown('buy-menu')"
+                                    class="px-4 py-2 font-sofia-sans rounded-full text-white flex items-center gap-1 focus:outline-none hover:border-black hover:border">
+                                    Buy
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                                <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                    <li><a href="#" onclick="activateMenu('buy-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 1</a>
+                                    </li>
+                                    <li><a href="#" onclick="activateMenu('buy-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 2</a>
+                                    </li>
+                                    <li><a href="#" onclick="activateMenu('buy-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="sell-menu" class="relative">
+                                <button onclick="toggleDropdown('sell-menu')"
+                                    class="px-4 py-2 font-sofia-sans rounded-full text-white flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                    Sell
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                                <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                    <li><a href="#" onclick="activateMenu('sell-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 1</a>
+                                    </li>
+                                    <li><a href="#" onclick="activateMenu('sell-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 2</a>
+                                    </li>
+                                    <li><a href="#" onclick="activateMenu('sell-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li id="rent-menu" class="relative">
+                                <button onclick="toggleDropdown('rent-menu')"
+                                    class="px-4 py-2 font-sofia-sans rounded-full text-white flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                    Rent
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                    <li><a href="#" onclick="activateMenu('rent-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 1</a>
+                                    </li>
+                                    <li><a href="#" onclick="activateMenu('rent-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 2</a>
+                                    </li>
+                                    <li><a href="#" onclick="activateMenu('rent-menu')"
+                                            class="block px-4 py-2 hover:bg-gray-100">Option 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="font-medium font-sofia-sans text-lg leading-custom-lg text-white hover:bg-green hover:text-white py-3 rounded-full px-2 cursor-pointer">
+                                Login</li>
+                            <li
+                                class="font-medium font-sofia-sans text-lg leading-custom-lg hover:text-black bg-green hover:bg-gray-100 text-white py-3 px-4 rounded-full cursor-pointer">
+                                Get started</li>
+                        </ul>
+                    </div>
+
+                </nav>
+                <h1
+                    class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-8xl md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-16 md:pt-12 pt-0 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
+                    Experience the epitome of home comfort</h1>
+                <div class="flex">
+                    <div class="flex-col">
+                        <p class="max-w-[368px] font-sofia-sans font-normal text-white opacity-60 leading-custom-xl">Our
+                            international brand
+                            specializes in property appraisal, sales, purchases, and investments. Trust us to deliver
+                            exceptional service and help you find your perfect real estate opportunity.</p>
+                        <img src="assets/images/png/platform.png" alt="plateform"
+                            class="lg:size-[181px] md:size-32 sm:size-24 size-20 lg:mt-11 md:mt-9 sm:mt-7 mt-5">
+                    </div>
+                    <div
+                        class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[51%] md:top-[44%] sm:top-[56%] top-[66%] xl:left-[41%] lg:left-[37%] md:left-[48%] sm:left-[28%] left-[30%]">
+                        <img src="assets/images/png/pool.png" alt="pool-img"
+                            class="2xl:max-w-[905px] xl:max-w-[700px] lg:max-w-[600px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px]">
+                        <div class="absolute top-[23%] left-[2%]">
+                            <img src="assets/images/png/pool-layer.png" alt="pool-layer"
+                                class="2xl:max-w-[854px] xl:max-w-[650px] lg:max-w-[550px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px]">
+                        </div>
+                        <div
+                            class="bg-orange absolute right-[-2%] top-[10%] rounded-full md:p-7 sm:p-6 p-4 flex items-center justify-center lg:size-[153px] md:size-24 sm:size-20 size-14">
+                            <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------strengths-------------->
+        <section class="bg-black relative xl:h-[800px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[260px] xl:pt-[134px] lg:pt-24 md:pt-16 sm:pt-12 pt-10">
+            <div class="container">
+                <h2
+                    class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium xl:text-custom-xxl lg:text-8xl md:text-6xl sm:text-5xl text-3xl leading-custom-lg max-w-[1344px] mx-auto text-center font-satoshi-sans z-10">
+                    Let's combine our strengths</h2>
+                <div
+                    class="absolute xl:top-[44%] lg:top-[31%] md:top-[37%] sm:top-[38%] top-[35%] xl:left-[32%] lg:left-[25%] md:left-[26%] sm:left-[28%] left-[18%]">
+                    <img src="assets/images/png/house.png" alt="pool-img"
+                        class="lg:max-w-[557px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px]">
+                    <div class="absolute top-[23%] left-[2%]">
+                        <img src="assets/images/png/house-layer.png" alt="pool-layer"
+                            class="lg:max-w-[526px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px]">
+                    </div>
+                    <div
+                        class="bg-orange absolute right-[-16%] top-[33%] rounded-full md:p-7 sm:p-6 p-4 flex items-center justify-center lg:size-[153px] md:size-24 sm:size-20 size-14">
+                        <img src="./assets/images/svg/green-arrow.svg" alt="arrow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------slider script link------------------------------->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+            integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!------------------------js link--------------------------->
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+
+</html>

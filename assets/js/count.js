@@ -28,7 +28,7 @@ $(window).scroll(function () {
     }
 });
 
-
+// video js
 document.getElementById('toggle-button').addEventListener('click', function () {
     var image = document.getElementById('dream-image');
     var video = document.getElementById('dream-video');

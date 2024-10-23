@@ -36,3 +36,47 @@
     src: url("../fonts/Sofia\ Pro\ Regular\ Az.otf");
     font-weight: 400;
 }
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    display: none !important;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+    width: 35% !important;
+    height: 35% !important;
+}
+
+.mySwiper2.swiper {
+    overflow: visible !important;
+    margin-left: 9px;
+}
+
+#quality .swiper-slide {
+    filter: blur(7px);
+    width: 500px;
+}
+
+
+#quality .swiper-slide-active {
+    filter: blur(0px);
+}
+
+#quality .swiper-slide img:not(.arrow-img) {
+    width: 547px;
+}
+
+#quality .swiper-slide-active img:not(.arrow-img) {
+    width: 632px;
+}
+
+@media (max-width:1024px) {
+    #quality .swiper-slide-active img:not(.arrow-img) {
+        width: 520px !important;
+    }
+
+    #quality .swiper-slide img:not(.arrow-img) {
+        width: 458px;
+    }
+}
