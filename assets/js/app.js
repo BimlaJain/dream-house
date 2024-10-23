@@ -26,7 +26,7 @@ var swiper2 = new Swiper(".mySwiper2", {
             translate: [0, 0, -400],
         },
         next: {
-            translate: ["70%", 0, 0],
+            translate: ["90%", 0, 0],
         },
     },
     loop: true,
