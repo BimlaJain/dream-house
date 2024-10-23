@@ -63,6 +63,7 @@
                     },
                     backgroundImage: {
                         'text-gradient': 'linear-gradient(99.73deg, #FFFFFF 42.68%, rgba(255, 255, 255, 0) 103.89%)',
+                        'custom-gradient': 'linear-gradient(180deg, #FFFFFF 40.97%, #000000 193.92%)',
                     },
                 },
             },
@@ -74,7 +75,8 @@
     <!-------------ABOUT US---------------->
     <section class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-12 lg:pb-20 md:pb-16 pb-4">
         <div class="container">
-            <div class="flex xl:justify-between xl:pb-[181px] lg:pb-40 md:pb-28 sm:pb-20 pb-16 flex-wrap justify-center">
+            <div
+                class="flex xl:justify-between xl:pb-[181px] lg:pb-40 md:pb-28 sm:pb-20 pb-16 flex-wrap justify-center">
                 <div class="flex-col">
                     <div class="flex gap-[26px] justify-center">
                         <img src="assets/images/png/star-circle.png" alt="star" class="md:size-[122px] size-[108px]">
@@ -89,13 +91,12 @@
                         guarantee the quality and
                         reliability of our products.</p>
                     <button
-                        class="bg-orange py-5 px-[38px] rounded-full font-bold text-lg leading-custom-lg max-xl:mt-5 max-xl:mx-auto flex border-2 border-orange hover:bg-white transition-all duration-700">
-                        Get Started
-                    </button>
+                        class="max-xl:mt-5 max-xl:mx-auto flex font-bold text-lg leading-custom-lg py-5 px-[38px] hover:before:bg-white  rounded-full relative overflow-hidden border-2 border-orange bg-orange  text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full"><span
+                            class="relative z-10">Get Started</span></button>
                 </div>
                 <div class="flex-col">
                     <h2
-                        class="max-w-[816px]  lg:text-7xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 max-xl:text-center bg-text-gradient bg-clip-text text-transparent">
+                        class="max-w-[816px] lg:text-7xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 max-xl:text-center bg-text-gradient bg-clip-text text-transparent">
                         We've found luxury homes for clients for a decade</h2>
                     <p
                         class="text-gray max-w-[710px] font-sofia-sans md:text-xl text-lg leading-custom-xl pb-[53px] font-medium max-xl:text-center max-xl:mx-auto">
@@ -148,7 +149,7 @@
                     class="bg-[url('assets/images/png/dream-house-image.png')] bg-cover bg-no-repeat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                 </div>
                 <img id="dream-image" src="assets/images/png/dream-house-image.png" alt="Dream House"
-                    class="xl:!max-w-[1380px] lg:max-w-[980px] md:max-w-[700px]  max-md:w-[590px] object-cover rounded-2xl relative lg:pb-28 pb-24 ">
+                    class="xl:!max-w-[1380px] lg:max-w-[980px] md:max-w-[700px] max-md:w-[590px] object-cover rounded-2xl relative lg:pb-28 pb-24 ">
                 <img src="assets/images/png/dream-house-layer.png" alt="layer"
                     class="absolute sm:top-[28%] top-[20%] xl:max-w-[1355px] lg:max-w-[960px] md:max-w-[690px] max-md:w-[450px] sm:left-[1%]left-[0]">
                 <video id="dream-video"
@@ -175,10 +176,26 @@
         </div>
     </section>
 
+    <!--------------strengths-------------->
+    <section class="bg-black min-h-screen relative pt-[134px]">
+        <div class="container">
+            <h2
+                class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium text-custom-xxl leading-custom-lg max-w-[1344px] mx-auto text-center font-satoshi-sans t">
+                Let's combine our strengths</h2>
+            <div class="absolute top-[26%] left-[30%]">
+                <img src="assets/images/png/combine-image.png" alt="combine">
+            </div>
+            <img src="assets/images/png/combine-arrow.png" alt="arrow"
+                class="size-[153px] absolute left-[61%] top-[36%]">
+
+        </div>
+    </section>
+
     <!---------------FOOTER-------------->
     <footer class="bg-green lg:pt-16 md:pt-14 pt-12 md:pb-[62px] pb-12">
         <div class="container">
-            <img src="assets/images/png/footer-logo.png" alt="footer-logo" class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3">
+            <img src="assets/images/png/footer-logo.png" alt="footer-logo"
+                class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3">
             <p
                 class="text-gray max-w-[585px] mx-auto text-center font-medium lg:text-custom-md text-xl leading-custom-xl font-sofia-sans">
                 We take great pride in ensuring the satisfaction of our customers, which</p>
@@ -255,7 +272,7 @@
                 </a>
             </div>
             <div class="border-b border-gray"></div>
-            <div class="flex  pt-9 justify-center flex-wrap">
+            <div class="flex pt-9 justify-center flex-wrap">
                 <a href=""
                     class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none pr-10 lg:pr-[72px] font-plus-sans">HOME</a>
                 <a href=""
@@ -265,12 +282,12 @@
                 <a href=""
                     class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none px-10 lg:px-[72px] font-plus-sans max-sm:mt-5">BLOG</a>
                 <a href=""
-                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg  px-10 xl:mt-0 max-xl:mt-10 max-lg:mt-5 lg:px-[72px] font-plus-sans">PRICING</a>
+                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg px-10 xl:mt-0 max-xl:mt-10 max-lg:mt-5 lg:px-[72px] font-plus-sans">PRICING</a>
             </div>
         </div>
     </footer>
-  
-  <!--------------------------slider script link------------------------------->
+
+    <!--------------------------slider script link------------------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
