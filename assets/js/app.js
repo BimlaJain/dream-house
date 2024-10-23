@@ -54,7 +54,7 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 
-// Navbar dropdown JS (dropdown toggle and active state handling)
+// Navbar dropdown JS
 let activeMenu = 'home-menu';
 let activeDropdown = null;
 
@@ -93,7 +93,7 @@ function toggleDropdown(menuId) {
     }
 }
 
-// Mobile menu icon toggle JS
+// menuicon JS
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 const hamburgerIcon = document.getElementById('hamburger-icon');
