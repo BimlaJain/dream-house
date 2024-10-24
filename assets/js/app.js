@@ -35,7 +35,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // Swiper for the second slider (creative effect)
 var swiper2 = new Swiper(".mySwiper2", {
-  grabCursor: true,
+  grabCursor: false,
   effect: "creative",
   creativeEffect: {
     prev: {
