@@ -72,8 +72,7 @@ function toggleDropdown(menuId) {
 
   if (activeDropdown && activeDropdown !== dropdown) {
     activeDropdown.classList.add("hidden");
-    const activeArrow =
-      activeDropdown.previousElementSibling.querySelector("svg");
+    const activeArrow = activeDropdown.previousElementSibling.querySelector("svg");
     activeArrow.classList.remove("rotate-180");
     activeDropdown.previousElementSibling.classList.remove("border-black");
   }
@@ -83,11 +82,25 @@ function toggleDropdown(menuId) {
     arrow.classList.add("rotate-180");
     button.classList.add("border-black");
     activeDropdown = dropdown;
+    document.addEventListener("click", handleClickOutside);
   } else {
-    dropdown.classList.add("hidden");
-    arrow.classList.remove("rotate-180");
-    button.classList.remove("border-black");
-    activeDropdown = null;
+    closeDropdown(dropdown, arrow, button);
+  }
+}
+
+function closeDropdown(dropdown, arrow, button) {
+  dropdown.classList.add("hidden");
+  arrow.classList.remove("rotate-180");
+  button.classList.remove("border-black");
+  activeDropdown = null;
+  document.removeEventListener("click", handleClickOutside);
+}
+
+function handleClickOutside(event) {
+  if (activeDropdown && !activeDropdown.parentElement.contains(event.target)) {
+    const arrow = activeDropdown.previousElementSibling.querySelector("svg");
+    const button = activeDropdown.previousElementSibling;
+    closeDropdown(activeDropdown, arrow, button);
   }
 }
 
@@ -95,10 +108,11 @@ function toggleDropdown(menuId) {
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const hamburgerIcon = document.getElementById("hamburger-icon");
-const closeIcon = document.getElementById("close-icon");
-
+const closeIcon = document.getElementById("close-icon");  
 menuBtn.addEventListener("click", () => {
   const isMenuOpen = !mobileMenu.classList.contains("hidden");
+  menuBtn.classList.toggle('active');
+  document.body.classList.toggle("overflow-hidden")
 
   if (isMenuOpen) {
     mobileMenu.classList.add("hidden");

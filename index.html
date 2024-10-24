@@ -22,7 +22,7 @@
                             center: true,
                             padding: "20px",
                             screens: {
-                                sm: "640px",
+                                sm: "575px",
                                 md: "768px",
                                 lg: "1024px",
                                 xl: "1140px",
@@ -68,131 +68,143 @@
         </script>
     </head>
 
-    <body>
+    <body class="scroll-smooth">
         <!----------------------hero section----------------------------------->
-        <section class="sm:pt-9 pt-5 pb-24 bg-green relative xl:h-[1047px] lg:h-[875px] sm:h-[656px] h-[550px]">
-            <div class="absolute top-0 right-0 max-w-[830px]"><img src="./assets/images/png/hero-layer.png" alt="layer"></div>
+        <section class="sm:pt-9 pt-5 pb-24 bg-green relative xl:h-[1047px] lg:h-[844px] sm:h-[656px] h-[550px]">
+            <div class="absolute top-0 right-0 max-w-[830px] pointer-events-none"><img src="./assets/images/png/hero-layer.png"
+                    alt="layer" class="pointer-events-none">
+            </div>
             <div class="container">
                 <nav class="flex justify-between items-center">
                     <a href="#"><img src="assets/images/png/logo.png" alt="logo" class="w-60 h-16"></a>
                     <div class="lg:hidden">
                         <button id="menu-btn" class="text-white focus:outline-none z-30 relative pr-4">
                             <!-- Hamburger Icon (default) -->
-                            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M4 6h16M4 12h16M4 18h16"></path>
                             </svg>
                             <!-- Cross Icon (hidden by default) -->
-                            <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M6 18L18 6M6 6l12 12">
+                            <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                                 </path>
                             </svg>
                         </button>
                     </div>
-
-                    <ul class="lg:flex hidden space-x-4 bg-off-white p-2 rounded-full items-center">
+                    <ul class="lg:flex hidden xl:space-x-4 space-x-0 bg-off-white p-2 rounded-full items-center">
                         <!-- Home Button -->
                         <li id="home-menu" class=" rounded-full active">
                             <a href="#" onclick="activateMenu('home-menu')"
-                                class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black hover:border">Home</a>
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black border-off-white border">Home</a>
                         </li>
-
+        
                         <!-- Properties Button -->
                         <li id="properties-menu">
                             <a href="#" onclick="activateMenu('properties-menu')"
-                                class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black hover:border">
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black border-off-white border">
                                 Properties
                             </a>
                         </li>
-
+        
                         <!-- Dropdown for Buy -->
                         <li id="buy-menu" class="relative">
                             <button onclick="toggleDropdown('buy-menu')"
-                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex items-center gap-1 focus:outline-none hover:border-black hover:border">
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex items-center gap-1 focus:outline-none hover:border-black border-off-white border">
                                 Buy
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                         stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
+        
                             </button>
                             <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                 <li><a href="#" onclick="activateMenu('buy-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        1</a></li>
                                 <li><a href="#" onclick="activateMenu('buy-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        2</a></li>
                                 <li><a href="#" onclick="activateMenu('buy-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        3</a></li>
                             </ul>
                         </li>
-
+        
                         <!-- Dropdown for Sell -->
                         <li id="sell-menu" class="relative">
                             <button onclick="toggleDropdown('sell-menu')"
-                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">
                                 Sell
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                         stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
+        
                             </button>
                             <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                 <li><a href="#" onclick="activateMenu('sell-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        1</a></li>
                                 <li><a href="#" onclick="activateMenu('sell-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        2</a></li>
                                 <li><a href="#" onclick="activateMenu('sell-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        3</a></li>
                             </ul>
                         </li>
-
+        
                         <!-- Dropdown for Rent -->
                         <li id="rent-menu" class="relative">
                             <button onclick="toggleDropdown('rent-menu')"
-                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">
                                 Rent
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                         stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
+        
                             </button>
                             <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                 <li><a href="#" onclick="activateMenu('rent-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        1</a></li>
                                 <li><a href="#" onclick="activateMenu('rent-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        2</a></li>
                                 <li><a href="#" onclick="activateMenu('rent-menu')"
-                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                                        class="block px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">Option
+                                        3</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <ul class="bg-off-white rounded-full p-2 px-4 lg:flex hidden justify-center items-center gap-3">
-                        <li
-                            class="font-medium font-sofia-sans text-lg leading-custom-lg text-black hover:bg-green hover:text-white py-3 rounded-full px-2 cursor-pointer">
-                            Login</li>
-                        <li
-                            class="font-medium font-sofia-sans text-lg leading-custom-lg hover:text-black bg-green hover:bg-gray-100 text-white py-3 px-4 rounded-full cursor-pointer">
-                            Get started</li>
-                    </ul>
+                    <div
+                        class="bg-off-white rounded-full p-2 lg:flex hidden justify-center items-center gap-10 relative max-w-[230px]">
+                        <input type="checkbox" id="toggle" class="hidden peer">
+                        <span
+                            class="absolute inset-y-0 left-0 peer-checked:w-[54%] w-[40%] m-2 bg-green rounded-full transition-all duration-300 peer-checked:left-[88px]"></span>
+                        <label for="toggle"
+                            class="font-medium font-sofia-sans text-lg leading-custom-lg relative z-10 flex-1 py-3 pl-8 text-center cursor-pointer text-white transition duration-300 peer-checked:text-black w-[54%]">
+                            Login
+                        </label>
+                        <label for="toggle"
+                            class="font-medium font-sofia-sans text-lg leading-custom-lg relative z-10 flex-1 pr-8 py-2 text-center cursor-pointer text-black transition duration-300 peer-checked:text-white whitespace-nowrap w-[115px]">
+                            Get started
+                        </label>
+                    </div>
                     <div id="mobile-menu"
                         class="hidden fixed inset-0 z-10 bg-green text-white flex flex-col items-center justify-center space-y-6 text-xl">
-                        <ul class=" space-x-4 p-2 rounded-full items-center">
-                            <li id="home-menu" class=" rounded-full active">
+                        <ul class="p-2 rounded-full items-center justify-start flex flex-col gap-4">
+                            <li id="home-menu" class="py-2 rounded-full active">
                                 <a href="#" onclick="activateMenu('home-menu')"
                                     class="px-4 py-2 font-sofia-sans rounded-full text-white hover:border-black hover:border">Home</a>
                             </li>
-
+        
                             <li id="properties-menu">
                                 <a href="#" onclick="activateMenu('properties-menu')"
-                                    class="px-4 py-2 font-sofia-sans rounded-full text-white focus:outline-none hover:border-black hover:border">
+                                    class="pr-4 pl-12 py-2 font-sofia-sans rounded-full text-white focus:outline-none hover:border-black hover:border">
                                     Properties
                                 </a>
                             </li>
@@ -205,7 +217,7 @@
                                         <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                             stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-
+        
                                 </button>
                                 <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                     <li><a href="#" onclick="activateMenu('buy-menu')"
@@ -228,7 +240,7 @@
                                         <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                             stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-
+        
                                 </button>
                                 <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                     <li><a href="#" onclick="activateMenu('sell-menu')"
@@ -265,17 +277,16 @@
                                 </ul>
                             </li>
                             <li
-                                class="font-medium font-sofia-sans text-lg leading-custom-lg text-white hover:bg-green hover:text-white py-3 rounded-full px-2 cursor-pointer">
+                                class="font-medium font-sofia-sans text-lg leading-custom-lg text-white hover:bg-green hover:text-white py-3 rounded-full pr-2 cursor-pointer">
                                 Login</li>
                             <li
-                                class="font-medium font-sofia-sans text-lg leading-custom-lg hover:text-black bg-green hover:bg-gray-100 text-white py-3 px-4 rounded-full cursor-pointer">
+                                class="font-medium font-sofia-sans text-lg leading-custom-lg hover:text-black bg-green hover:bg-gray-100 text-white py-3 px-4 rounded-full cursor-pointer border border-white">
                                 Get started</li>
                         </ul>
                     </div>
-
                 </nav>
                 <h1
-                    class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-8xl md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-16 md:pt-12 pt-0 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
+                    class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-[82px] md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-14 md:pt-12 pt-0 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
                     Experience the epitome of home comfort</h1>
                 <div class="flex">
                     <div class="flex-col">
@@ -284,7 +295,7 @@
                             specializes in property appraisal, sales, purchases, and investments. Trust us to deliver
                             exceptional service and help you find your perfect real estate opportunity.</p>
                         <img src="assets/images/png/platform.png" alt="plateform"
-                            class="lg:size-[181px] md:size-32 sm:size-24 size-20 lg:mt-11 md:mt-9 sm:mt-7 mt-5">
+                            class="lg:size-[181px] md:size-32 sm:size-24 size-20 lg:mt-9 md:mt-9 sm:mt-7 mt-5">
                     </div>
                     <div
                         class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[51%] md:top-[44%] sm:top-[56%] top-[66%] xl:left-[41%] lg:left-[37%] md:left-[48%] sm:left-[28%] left-[30%]">
@@ -295,7 +306,7 @@
                                 class="2xl:max-w-[854px] xl:max-w-[650px] lg:max-w-[550px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px]">
                         </div>
                         <div
-                            class="bg-orange absolute right-[-2%] top-[10%] rounded-full md:p-7 sm:p-6 p-4 flex items-center justify-center lg:size-[153px] md:size-24 sm:size-20 size-14">
+                            class="bg-orange absolute right-[-2%] top-[10%] rounded-full md:p-7 sm:p-6 p-4 flex items-center justify-center xl:size-[153px] lg:size-24 md:size-24 sm:size-20 size-14">
                             <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                         </div>
                     </div>
@@ -590,13 +601,13 @@
         </section>
 
         <!--------------strengths-------------->
-        <section  class="bg-black relative xl:h-[850px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[260px] xl:pt-[134px] lg:pt-24 md:pt-16 sm:pt-12 pt-10">
+        <section class="bg-black relative xl:h-[850px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[300px] xl:pt-[134px] lg:pt-24 md:pt-16 sm:pt-12 pt-10">
             <div class="container">
                 <h2
                     class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium xl:text-custom-xxl lg:text-8xl md:text-6xl sm:text-5xl text-3xl leading-custom-lg max-w-[1344px] mx-auto text-center font-satoshi-sans z-10">
                     Let's combine our strengths</h2>
                 <div
-                    class="absolute xl:top-[44%] lg:top-[31%] md:top-[37%] sm:top-[38%] top-[35%] xl:left-[32%] lg:left-[25%] md:left-[26%] sm:left-[28%] left-[18%]">
+                    class="absolute xl:top-[41%] lg:top-[31%] md:top-[37%] sm:top-[38%] top-[35%] xl:left-[32%] lg:left-[25%] md:left-[26%] sm:left-[28%] left-[18%]">
                     <img src="assets/images/png/house.png" alt="pool-img"
                         class="lg:max-w-[557px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px]">
                     <div class="absolute top-[23%] left-[2%]">
@@ -701,7 +712,8 @@
                         class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg px-10 xl:mt-0 max-xl:mt-10 max-lg:mt-5 lg:px-[72px] font-plus-sans">PRICING</a>
                 </div>
             </div>
-        </footer>      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        </footer>    
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!--------------------------swiper script link------------------------------->
