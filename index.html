@@ -210,77 +210,81 @@
                         <ul class="p-2 rounded-full items-center justify-start flex flex-col gap-4 ">
                             <li id="home-menu" class="py-2 rounded-full active">
                                 <a href="#" onclick="activateMenu('home-menu')"
-                                    class="px-4 py-2 ml-5 font-sofia-sans md:text-3xl text-xl rounded-full text-white hover:border-black hover:border">Home</a>
+                                    class="px-4 py-2 sm:ml-5 ml-2 font-sofia-sans md:text-3xl text-xl rounded-full text-white hover:border-black hover:border">Home</a>
                             </li>
 
                             <li id="properties-menu">
                                 <a href="#" onclick="activateMenu('properties-menu')"
-                                    class="px-4 ml-[70px] py-2 font-sofia-sans rounded-full md:text-3xl text-xl text-white focus:outline-none hover:border-black hover:border">
+                                    class="px-4 sm:ml-[70px] ml-11 py-2 font-sofia-sans rounded-full md:text-3xl text-xl text-white focus:outline-none hover:border-black hover:border">
                                     Properties
                                 </a>
                             </li>
-                            <li id="buy-menu" class="relative">
-                                <button onclick="toggleDropdown('buy-menu')"
-                                    class="px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">
-                                    Buy
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
-                                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                                <ul class="hidden absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg">
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option
-                                            1</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option
-                                            2</a></li>
-                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option
-                                            3</a></li>
-                                </ul>
+                            <li class="relative group">
+                                <button
+                                    class="block px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">Buy
+                                    <span><svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                                stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span></button>
+                                <div
+                                    class="absolute hidden group-hover:block bg-white text-black shadow-md top-[21%] right-[-120%]">
+                                    <ul>
+                                        <li
+                                            class=" px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 1</a></li>
+                                        <li
+                                            class="px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 2</a></li>
+                                        <li
+                                            class="px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 3</a></li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li id="sell-menu" class="relative">
-                                <button onclick="toggleDropdown('sell-menu')"
-                                    class="px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">
-                                    Sell
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
-                                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                                <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
-                                    <li><a href="#" onclick="activateMenu('sell-menu')"
-                                            class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 1</a>
-                                    </li>
-                                    <li><a href="#" onclick="activateMenu('sell-menu')"
-                                            class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 2</a>
-                                    </li>
-                                    <li><a href="#" onclick="activateMenu('sell-menu')"
-                                            class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 3</a>
-                                    </li>
-                                </ul>
+                            <li class="relative group">
+                                <button
+                                    class="block px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">Sell
+                                    <span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span></button>
+                                <div class="absolute hidden group-hover:block bg-white text-black shadow-md top-[21%] right-[-120%]">
+                                    <ul>
+                                        <li
+                                            class=" px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 1</a>
+                                        </li>
+                                        <li class="px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 2</a>
+                                        </li>
+                                        <li class="px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
-                            <li id="rent-menu" class="relative">
-                                <button onclick="toggleDropdown('rent-menu')"
-                                    class="px-4 py-2 font-sofia-sans rounded-full text-white flex gap-1 md:text-3xl text-xl items-center focus:outline-none hover:border-black hover:border">
-                                    Rent
-                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
-                                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </button>
-                                <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
-                                    <li><a href="#" onclick="activateMenu('rent-menu')"
-                                            class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 1</a>
-                                    </li>
-                                    <li><a href="#" onclick="activateMenu('rent-menu')"
-                                            class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 2</a>
-                                    </li>
-                                    <li><a href="#" onclick="activateMenu('rent-menu')"
-                                            class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 3</a>
-                                    </li>
-                                </ul>
+                            <li class="relative group">
+                                <button
+                                    class="block px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">Rent
+                                    <span><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787" stroke-width="1.66667"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg></span></button>
+                                <div class="absolute hidden group-hover:block bg-white text-black shadow-md top-[21%] right-[-120%]">
+                                    <ul>
+                                        <li
+                                            class=" px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 1</a>
+                                        </li>
+                                        <li class="px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 2</a>
+                                        </li>
+                                        <li class="px-4 py-2 hover:bg-green hover:text-white font-normal font-sofia-sans text-lg leading-custom-lg">
+                                            <a href="#">Option 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li
                                 class="font-medium font-sofia-sans md:text-3xl text-xl leading-custom-lg text-white hover:border-black hover:border py-3 rounded-full px-4 cursor-pointer">
@@ -330,7 +334,7 @@
                             <img src="assets/images/webp/star-circle.webp" alt="star"
                                 class="lg:size-[122px] md:size-[75px] size-[65px] pointer-events-none">
                             <p
-                                class="font-medium text-white md:text-custom-lg text-2xl leading-custom-lg font-satoshi-sans text-center pt-[34px]">
+                                class="font-medium text-white md:text-custom-lg text-2xl leading-custom-lg font-satoshi-sans text-center sm:pt-[34px] pt-4">
                                 About Us</p>
                         </div>
                         <p
@@ -521,7 +525,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -529,7 +534,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -537,7 +543,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -545,7 +552,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -553,7 +561,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -561,7 +570,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -569,7 +579,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -577,7 +588,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -585,7 +597,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -593,7 +606,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -601,7 +615,8 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
+                                        class="pointer-events-none">
                                 </div>
                             </div>
                         </div>
