@@ -14,17 +14,17 @@
         <!---------------------------------tailwind link-------------------->
         <script src="https://cdn.tailwindcss.com"></script>
 
-        <!-- Primary Meta Tags -->        
+        <!-- Primary Meta Tags -->
         <meta name="title" content="Dream House" />
         <meta name="description" content="Experience the epitome of home comfort" />
-        
+
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dream-house-theta.vercel.app/" />
         <meta property="og:title" content="Dream House" />
         <meta property="og:description" content="Experience the epitome of home comfort" />
         <meta property="og:image" content="/meta-img.png" />
-        
+
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://dream-house-theta.vercel.app/" />
@@ -90,9 +90,10 @@
     <body class="scroll-smooth bg-black">
         <!----------------------hero section----------------------------------->
         <section id="hero"
-            class="sm:pt-9 pt-5 pb-24 bg-green relative xl:h-[1047px] lg:h-[634px] sm:h-[656px] h-[550px]">
-            <div class="absolute top-0 right-0 xl:max-w-[830px] lg:max-w-[600px] md:max-w-[600px] sm:max-w-[350px] max-w-[250px] pointer-events-none"><img
-                    src="./assets/images/png/hero-layer.png" alt="layer" class="pointer-events-none">
+            class="sm:pt-9 max-w-[1600px] mx-auto relative pt-5 bg-green xl:h-[1047px] lg:h-[634px] sm:h-[622px] h-[520px]">
+            <div
+                class="absolute top-0 right-0 xl:max-w-[830px] lg:max-w-[600px] md:max-w-[600px] sm:max-w-[350px] max-w-[250px] pointer-events-none">
+                <img src="./assets/images/png/hero-layer.png" alt="layer" class="pointer-events-none">
             </div>
             <div class="container">
                 <nav class="flex justify-between items-center">
@@ -230,21 +231,25 @@
                                     Properties
                                 </a>
                             </li>
-                        <li id="buy-menu" class="relative">
-                            <button onclick="toggleDropdown('buy-menu')"
-                                class="px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">
-                                Buy
-                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787" stroke-width="1.66667"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                            <ul class="hidden absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg">
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 1</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 2</a></li>
-                                <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option 3</a></li>
-                            </ul>
-                        </li>
+                            <li id="buy-menu" class="relative">
+                                <button onclick="toggleDropdown('buy-menu')"
+                                    class="px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                    Buy
+                                    <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                            stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <ul class="hidden absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option
+                                            1</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option
+                                            2</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-100 md:text-3xl text-xl">Option
+                                            3</a></li>
+                                </ul>
+                            </li>
                             <li id="sell-menu" class="relative">
                                 <button onclick="toggleDropdown('sell-menu')"
                                     class="px-4 py-2 font-sofia-sans rounded-full text-white md:text-3xl text-xl flex gap-1 items-center focus:outline-none hover:border-black hover:border">
@@ -300,7 +305,7 @@
                     </div>
                 </nav>
                 <h1
-                    class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-[60px] md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-8 md:pt-12 pt-0 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
+                    class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-[60px] md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-8 md:pt-6 pt-0 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
                     Experience the epitome of home comfort</h1>
                 <div class="flex">
                     <div class="flex-col">
@@ -312,7 +317,7 @@
                             class="xl:size-[181px] lg:size-[150px`] md:size-32 sm:size-24 size-20 lg:mt-9 md:mt-9 sm:mt-7 mt-5 pointer-events-none">
                     </div>
                     <div
-                        class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[38%] md:top-[44%] sm:top-[56%] top-[66%] xl:left-[41%] lg:left-[37%] md:left-[48%] sm:left-[28%] left-[30%]">
+                        class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[38%] md:top-[44%] sm:top-[56%] top-[63%] xl:left-[39%] lg:left-[37%] md:left-[48%] sm:left-[28%] left-[27%]">
                         <img src="assets/images/png/pool.png" alt="pool-img"
                             class="2xl:max-w-[905px] xl:max-w-[700px] lg:max-w-[550px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px] pointer-events-none">
                         <div class="absolute top-[24%] left-[2%]">
@@ -320,7 +325,7 @@
                                 class="2xl:max-w-[854px] xl:max-w-[650px] lg:max-w-[510px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px] pointer-events-none">
                         </div>
                         <div
-                            class="bg-orange absolute right-[-6%] top-[46%] rounded-full lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                            class="bg-orange absolute right-[-2%] top-[10%] rounded-full lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
                             <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
                         </div>
                     </div>
@@ -329,9 +334,10 @@
         </section>
 
         <!-------------ABOUT US---------------->
-        <section id="about" class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-[40px] lg:pb-20 md:pb-16 pb-4">
+        <section id="about"
+            class="bg-black  max-w-[1600px] mx-auto xl:pt-[155px] lg:pt-12 md:pt-10 sm:pt-9 pt-8 md:pb-0 pb-4">
             <div class="container">
-                <div class="flex xl:justify-between xl:pb-[181px] lg:pb-40 md:pb-28 sm:pb-20 pb-16 flex-wrap">
+                <div class="flex xl:justify-between xl:pb-[181px] lg:pb-16 md:pb-10 sm:pb-8 pb-6 flex-wrap">
                     <div class="flex-col">
                         <div class="flex gap-[26px]">
                             <img src="assets/images/png/star-circle.png" alt="star"
@@ -355,7 +361,7 @@
                             class="max-w-[816px] xl:text-7xl lg:text-6xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 bg-text-gradient bg-clip-text text-transparent">
                             We've found luxury homes for clients for a decade</h2>
                         <p
-                            class="text-gray xl:max-w-[710px] font-sofia-sans md:text-xl text-lg leading-custom-xl pb-[53px] font-medium ">
+                            class="text-gray xl:max-w-[710px] font-sofia-sans md:text-xl text-lg leading-custom-xl pb-9 font-medium ">
                             We take great pride in ensuring the satisfaction of our customers, which is why we guarantee
                             that
                             the products we sell
@@ -438,7 +444,7 @@
 
         <!----------------------PROJECT SECTION--------------------------->
         <section id="project"
-            class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover bg-no-repeat lg:pt-20 md:pt-12 pt-8">
+            class="bg-green  max-w-[1600px] mx-auto bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover bg-no-repeat xl:pt-20 lg:pt-12 md:pt-10 pt-8">
             <div class="container">
                 <div class="flex justify-between items-center flex-wrap">
                     <div class="flex items-center gap-7 max-lg:pb-6">
@@ -448,13 +454,14 @@
                             class="font-medium lg:text-custom-lg text-white md:leading-custom-lg md:text-4xl sm:text-3xl text-3xl">
                             The Project</h2>
                     </div>
-                    <p class="font-medium md:text-xl text-lg !leading-custom-xl text-white lg:max-w-[480px] max-sm:pt-0">
+                    <p
+                        class="font-medium md:text-xl text-lg !leading-custom-xl text-white lg:max-w-[480px] max-sm:pt-0">
                         Together, we can conquer
                         challenges, utilize
                         our strengths, and achieve remarkable success in this ambitious home
                         project.</p>
                 </div>
-                <div class="swiper mySwiper lg:pt-16 pt-8 lg:pb-11 pb-7">
+                <div class="swiper mySwiper xl:pt-16 lg:pt-8 pt-8 lg:pb-11 pb-7">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="./assets/images/png/swimming-pool-img.png" alt=""
@@ -468,7 +475,8 @@
                     <div class="flex slick-arrow-buttons gap-3 lg:py-16 py-10 mx-3 relative">
                         <button
                             class="swiper-button-prev absolute bottom-[30%] lg:left-[40%] hover:opacity-60 xl:left-[43%] md:left-[40%] left-[30%] border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 text-white">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M10.1514 16.7069C9.76092 17.0974 9.12775 17.0974 8.73723 16.7069L2.73723 10.7069C2.34671 10.3163 2.34671 9.68317 2.73723 9.29265L8.73723 3.29265C9.12775 2.90212 9.76092 2.90212 10.1514 3.29265C10.542 3.68317 10.542 4.31634 10.1514 4.70686L5.85855 8.99976L17.4443 8.99976C17.9966 8.99976 18.4443 9.44747 18.4443 9.99976C18.4443 10.552 17.9966 10.9998 17.4443 10.9998L5.85855 10.9998L10.1514 15.2926C10.542 15.6832 10.542 16.3163 10.1514 16.7069Z"
                                     fill="white" />
@@ -476,22 +484,23 @@
                         </button>
                         <button
                             class="swiper-button-next absolute bottom-[30%] lg:left-[51%] left-[50%] hover:opacity-60 border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 text-white">
-                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M10.8486 3.29289C11.2391 2.90237 11.8722 2.90237 12.2628 3.29289L18.2628 9.29289C18.6533 9.68342 18.6533 10.3166 18.2628 10.7071L12.2628 16.7071C11.8722 17.0976 11.2391 17.0976 10.8486 16.7071C10.458 16.3166 10.458 15.6834 10.8486 15.2929L15.1414 11L3.55566 11C3.00338 11 2.55566 10.5523 2.55566 10C2.55566 9.44771 3.00338 9 3.55566 9L15.1414 9L10.8486 4.70711C10.458 4.31658 10.458 3.68342 10.8486 3.29289Z"
                                     fill="white" />
                             </svg>
                         </button>
-        
+
                     </div>
                 </div>
             </div>
             </div>
         </section>
-        
+
         <!----------------------QUALITY SECTION--------------------------->
         <section id="quality"
-            class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover relative bg-no-repeat overflow-hidden pb-11 xl:pt-16 pt-8 -mt-1">
+            class="bg-green  max-w-[1600px] mx-auto bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover relative bg-no-repeat overflow-hidden xl:pb-11 lg:pb-12 md:pb-10 sm:pb-8 pb-6 xl:pt-16 lg:pt-4 pt-0 -mt-1">
             <div class="container">
                 <div class="flex justify-between flex-wrap">
                     <div class="flex-col mr-20">
@@ -503,10 +512,10 @@
                                 Our Quality</h2>
                         </div>
                         <h2
-                            class="font-bold md:pb-7 pb-3 uppercase xl:text-7xl lg:text-6xl md:text-4xl text-3xl bg-gradient-to-br from-white via-white to-transparent bg-clip-text text-transparent xl:max-w-[570px] lg:max-w-[617px] leading-custom-base">
+                            class="font-bold md:pb-7 pb-3 uppercase  xl:text-7xl lg:text-6xl sm:text-6xl text-4xl bg-gradient-to-br from-white via-white to-transparent bg-clip-text text-transparent xl:max-w-[570px] lg:max-w-[617px] leading-custom-base">
                             Design a cozy and fresh interior</h2>
                         <p
-                            class="xl:max-w-[453px] lg:max-w-[544px] md:max-w-[494px] font-medium lg:text-xl text-base text-[#A0A0A0] lg:pb-16 pb-4">
+                            class="xl:max-w-[453px] lg:max-w-[544px] md:max-w-[494px] font-medium lg:text-xl text-base text-[#A0A0A0] xl::pb-16 lg:pb-10 pb-4">
                             Crafting
                             an
                             Inviting
@@ -626,16 +635,16 @@
         </section>
         <!--------------strengths-------------->
         <section id="strength"
-            class="bg-black max-w-[1600px] mx-auto relative xl:h-[850px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[300px] xl:pt-[134px] lg:pt-24 md:pt-16 sm:pt-12 pt-10">
+            class="bg-black max-w-[1600px] mx-auto relative xl:h-[850px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[265px] xl:pt-[134px] lg:pt-12 md:pt-10 sm:pt-8 pt-6">
             <div class="container">
                 <h2
                     class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium xl:text-custom-xxl lg:text-6xl md:text-6xl sm:text-5xl text-3xl leading-custom-lg xl:max-w-[1344px] mx-auto text-center font-satoshi-sans z-10 max-w-[600px]">
                     Let's combine our strengths</h2>
                 <div
-                    class="absolute xl:top-[41%] lg:top-[31%] md:top-[37%] sm:top-[38%] top-[31%] xl:left-[32%] lg:left-[25%] md:left-[26%] sm:left-[28%] left-[18%]">
+                    class="absolute xl:top-[41%] lg:top-[31%] md:top-[37%] sm:top-[38%] top-[29%] xl:left-[32%] lg:left-[25%] md:left-[26%] sm:left-[28%] left-[18%]">
                     <img src="assets/images/png/house.png" alt="pool-img"
                         class="lg:max-w-[557px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px] pointer-events-none">
-                    <div class="absolute top-[23%] left-[2%]">
+                    <div class="absolute top-[25%] left-[2%]">
                         <img src="assets/images/png/house-layer.png" alt="pool-layer"
                             class="lg:max-w-[526px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px] pointer-events-none">
                     </div>
@@ -648,7 +657,8 @@
         </section>
 
         <!---------------FOOTER-------------->
-        <footer id="footer" class="bg-green lg:pt-16 md:pt-14 pt-[40px] lg:pb-[62px] md:pb-8 pb-6">
+        <footer id="footer"
+            class="bg-green  max-w-[1600px] mx-auto xl:pt-16 lg:pt-12 md:pt-10 pt-8 lg:pb-12 md:pb-10 sm:pb-8 pb-6">
             <div class="container">
                 <a href=""><img src="assets/images/png/footer-logo.png" alt="footer-logo"
                         class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3 pointer-events-none"></a>
@@ -743,8 +753,8 @@
             </div>
             <div
                 class="top-btn w-14 h-14 rounded-full fixed bottom-7 right-7 bg-darkblue z-20 p-2 bg-blue-600 cursor-pointer flex justify-center items-center transition">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="white" class="bi bi-chevron-double-up"
-                    viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="white"
+                    class="bi bi-chevron-double-up" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z" />
                     <path fill-rule="evenodd"
