@@ -38,7 +38,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // Swiper for the second slider (creative effect)
 var swiper2 = new Swiper(".mySwiper2", {
-  grabCursor: true,
+  grabCursor: false,
   effect: "creative",
   creativeEffect: {
     prev: {
@@ -131,6 +131,20 @@ menuBtn.addEventListener("click", () => {
     hamburgerIcon.classList.add("hidden");
     closeIcon.classList.remove("hidden");
   }
+  menuBtn.addEventListener("click", () => {
+    const isMenuOpen = !mobileMenu.classList.contains("hidden");
+    if (isMenuOpen) {
+      // Close mobile menu
+      mobileMenu.classList.add("hidden");
+      closeIcon.classList.add("hidden");
+      hamburgerIcon.classList.remove("hidden");
+    } else {
+      // Open mobile menu
+      mobileMenu.classList.remove("hidden");
+      closeIcon.classList.remove("hidden");
+      hamburgerIcon.classList.add("hidden");
+    }
+  });
 });
 
 // Counter JS
@@ -162,3 +176,21 @@ $(window).scroll(function () {
     counted = 1;
   }
 });
+
+// back-to-top-button
+const mybutton = document.querySelector(".top-btn");
+const show = document.querySelector(".active")
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 100) {
+    mybutton.classList.add("active")
+  }
+  else {
+    mybutton.classList.remove("active")
+  }
+})
+mybutton.addEventListener("click", function () {
+  document.documentElement.scrollTop = 0;
+
+});
+
