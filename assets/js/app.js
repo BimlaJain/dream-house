@@ -51,10 +51,10 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
   slideToClickedSlide: true,
   speed: 1500,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   smooth: true,
   loop: true,
 });
