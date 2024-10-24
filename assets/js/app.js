@@ -14,6 +14,9 @@ document.getElementById("toggle-button").addEventListener("click", function () {
     video.currentTime = 0;
   }
 });
+document.getElementById('toggle-button').addEventListener('click', function () {
+  this.remove();
+});
 // Swiper for the first slider (fade effect)
 var swiper = new Swiper(".mySwiper", {
   navigation: {
