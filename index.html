@@ -70,7 +70,7 @@
 
     <body class="scroll-smooth">
         <!----------------------hero section----------------------------------->
-        <section class="sm:pt-9 pt-5 pb-24 bg-green relative xl:h-[1047px] lg:h-[844px] sm:h-[656px] h-[550px]">
+        <section id="hero" class="sm:pt-9 pt-5 pb-24 bg-green relative xl:h-[1047px] lg:h-[844px] sm:h-[656px] h-[550px]">
             <div class="absolute top-0 right-0 max-w-[830px] pointer-events-none"><img
                     src="./assets/images/png/hero-layer.png" alt="layer" class="pointer-events-none">
             </div>
@@ -97,13 +97,13 @@
                     <ul class="lg:flex hidden xl:space-x-4 space-x-0 bg-off-white p-2 rounded-full items-center">
                         <!-- Home Button -->
                         <li id="home-menu" class=" rounded-full active">
-                            <a href="#" onclick="activateMenu('home-menu')"
+                            <a href="#hero" onclick="activateMenu('home-menu')"
                                 class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black border-off-white border">Home</a>
                         </li>
 
                         <!-- Properties Button -->
                         <li id="properties-menu">
-                            <a href="#" onclick="activateMenu('properties-menu')"
+                            <a href="#about" onclick="activateMenu('properties-menu')"
                                 class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black border-off-white border">
                                 Properties
                             </a>
@@ -319,7 +319,7 @@
         </section>
 
         <!-------------ABOUT US---------------->
-        <section class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-[40px] lg:pb-20 md:pb-16 pb-4">
+        <section id="about" class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-[40px] lg:pb-20 md:pb-16 pb-4">
             <div class="container">
                 <div class="flex xl:justify-between xl:pb-[181px] lg:pb-40 md:pb-28 sm:pb-20 pb-16 flex-wrap">
                     <div class="flex-col">
@@ -421,7 +421,6 @@
             </div>
         </section>
 
-
         <!----------------------PROJECT SECTION--------------------------->
         <section id="project"
             class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover bg-no-repeat lg:pt-20 md:pt-12 pt-8">
@@ -498,7 +497,7 @@
                             Unveiling the
                             Art of Designing a Cozy and Fresh Interior for Unmatched Comfort and Serenity</p>
                         <button
-                            class="xl:py-5 lg:py-4 py-3 font-bold lg:px-10 px-6 text-green bg-orange rounded-[111px] xl:mb-0 mb-10 text-lg !leading-5  hover:before:bg-white  relative overflow-hidden border-2 border-orange bg-orange  text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full"><span
+                            class="xl:py-5 lg:py-4 py-3 font-bold lg:px-10 px-6 text-green bg-orange rounded-[111px] xl:mb-0 mb-10 text-lg !leading-5 hover:before:bg-white relative overflow-hidden border-2 border-orange bg-orange text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full"><span
                                 class="relative z-10">Get Started</span></button>
                     </div>
                     <div
@@ -609,10 +608,8 @@
             </div>
         </section>
 
-
         <!--------------strengths-------------->
-        <section
-            class="bg-black relative xl:h-[850px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[300px] xl:pt-[134px] lg:pt-24 md:pt-16 sm:pt-12 pt-10">
+        <section id="strength" class="bg-black relative xl:h-[850px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[300px] xl:pt-[134px] lg:pt-24 md:pt-16 sm:pt-12 pt-10">
             <div class="container">
                 <h2
                     class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium xl:text-custom-xxl lg:text-8xl md:text-6xl sm:text-5xl text-3xl leading-custom-lg max-w-[1344px] mx-auto text-center font-satoshi-sans z-10">
@@ -634,7 +631,7 @@
         </section>
 
         <!---------------FOOTER-------------->
-        <footer class="bg-green lg:pt-16 md:pt-14 py-[40px] md:pb-[62px]">
+        <footer id="footer" class="bg-green lg:pt-16 md:pt-14 py-[40px] md:pb-[62px]">
             <div class="container">
                 <a href=""><img src="assets/images/png/footer-logo.png" alt="footer-logo"
                         class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3 pointer-events-none"></a>
@@ -713,19 +710,20 @@
                 </div>
                 <div class="border-b border-gray"></div>
                 <div class="flex pt-9 justify-center flex-wrap">
-                    <a href=""
+                    <a href="#hero"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg sm:border-r border-gray border-r-none md:pr-10 sm:px-6 pe-8 pl-2 xl:pr-[72px] lg:px-[50px] font-plus-sans max-sm:mb-5">HOME</a>
-                    <a href=""
+                    <a href="#about"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg sm:border-r border-gray border-r-none md:px-10 sm:px-6 pl-16 pr-6 xl:px-[72px] lg:px-[50px] font-plus-sans max-sm:mb-5">ABOUT</a>
-                    <a href=""
+                    <a href="#project"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg sm:border-r border-gray border-r-none md:px-10 sm:px-6 pe-6 pl-1 xl:px-[72px] lg:px-[50px] font-plus-sans max-sm:mb-5">PROPERTIES</a>
-                    <a href=""
+                    <a href="#quality"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg sm:border-r border-gray border-r-none md:px-10 px-6 xl:px-[72px] lg:px-[50px] font-plus-sans max-sm:mb-5">BLOG</a>
-                    <a href=""
+                    <a href="footer"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg px-10 xl:mt-0 xl:px-[72px] lg:px-[50px] font-plus-sans">PRICING</a>
                 </div>
             </div>
         </footer>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
             integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
