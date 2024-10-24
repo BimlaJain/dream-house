@@ -8,29 +8,29 @@
         <!---------------custom css link------------------------>
         <link rel="stylesheet" href="./assets/css/style.css" />
         <!------------------------------------favicon--------------------------->
-        <link rel="shortcut icon" href="assets/images/png/fav.png" type="image/x-icon">
+        <link rel="shortcut icon" href="assets/images/webp/fav.webp" type="image/x-icon">
         <!---------------------------swiper link--------------------------------->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
         <!---------------------------------tailwind link-------------------->
         <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Primary Meta Tags -->
         <meta name="title" content="Dream House" />
-        <meta name="description" content="Experience the epitome of home comfort" />
+        <meta name="description" content="Experience the epitome of home comfort"/>
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://dream-house-theta.vercel.app/" />
+        <meta property="og:url" content="https://dream-house-theta.vercel.app/"/>
         <meta property="og:title" content="Dream House" />
         <meta property="og:description" content="Experience the epitome of home comfort" />
-        <meta property="og:image" content="/meta-img.png" />
+        <meta property="og:image" content="/meta-img.png"/>
 
         <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://dream-house-theta.vercel.app/" />
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://dream-house-theta.vercel.app/"/>
         <meta property="twitter:title" content="Dream House" />
-        <meta property="twitter:description" content="Experience the epitome of home comfort" />
-        <meta property="twitter:image" content="/meta-img.png" />
+        <meta property="twitter:description" content="Experience the epitome of home comfort"/>
+        <meta property="twitter:image" content="/meta-img.png"/>
         <!-- Meta Tags Generated with https://metatags.io -->
         <!--------------------------custom root----------------------------->
         <script>
@@ -93,11 +93,11 @@
             class="sm:pt-9 max-w-[1600px] mx-auto relative pt-5 bg-green xl:h-[1047px] lg:h-[634px] sm:h-[622px] h-[520px]">
             <div
                 class="absolute top-0 right-0 xl:max-w-[830px] lg:max-w-[600px] md:max-w-[600px] sm:max-w-[350px] max-w-[250px] pointer-events-none">
-                <img src="./assets/images/png/hero-layer.png" alt="layer" class="pointer-events-none">
+                <img src="./assets/images/webp/hero-layer.webp" alt="layer" class="pointer-events-none">
             </div>
             <div class="container">
                 <nav class="flex justify-between items-center">
-                    <a href="#"><img src="assets/images/png/logo.png" alt="logo" class="w-60 h-16"></a>
+                    <a href="#"><img src="assets/images/webp/logo.webp" alt="logo" class="w-60 h-16"></a>
                     <div class="lg:hidden pt-2">
                         <button id="menu-btn" class="text-white focus:outline-none z-30 relative pr-4">
                             <svg id="hamburger-icon" class="w-9 h-9" fill="none" stroke="currentColor"
@@ -114,21 +114,16 @@
                         </button>
                     </div>
                     <ul class="lg:flex hidden xl:space-x-4 space-x-0 bg-off-white p-2 rounded-full items-center">
-                        <!-- Home Button -->
                         <li id="home-menu" class=" rounded-full active">
                             <a href="#hero" onclick="activateMenu('home-menu')"
                                 class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black border-off-white border">Home</a>
                         </li>
-
-                        <!-- Properties Button -->
                         <li id="properties-menu">
                             <a href="#about" onclick="activateMenu('properties-menu')"
                                 class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black border-off-white border">
                                 Properties
                             </a>
                         </li>
-
-                        <!-- Dropdown for Buy -->
                         <li id="buy-menu" class="relative">
                             <button onclick="toggleDropdown('buy-menu')"
                                 class="px-4 py-2 font-sofia-sans rounded-full text-black flex items-center gap-1 focus:outline-none hover:border-black border-off-white border">
@@ -138,7 +133,6 @@
                                     <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                         stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
                             </button>
                             <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                 <li><a href="#" onclick="activateMenu('buy-menu')"
@@ -152,8 +146,6 @@
                                         3</a></li>
                             </ul>
                         </li>
-
-                        <!-- Dropdown for Sell -->
                         <li id="sell-menu" class="relative">
                             <button onclick="toggleDropdown('sell-menu')"
                                 class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">
@@ -163,7 +155,6 @@
                                     <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                         stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
                             </button>
                             <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                 <li><a href="#" onclick="activateMenu('sell-menu')"
@@ -177,8 +168,6 @@
                                         3</a></li>
                             </ul>
                         </li>
-
-                        <!-- Dropdown for Rent -->
                         <li id="rent-menu" class="relative">
                             <button onclick="toggleDropdown('rent-menu')"
                                 class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black border-off-white border">
@@ -188,7 +177,6 @@
                                     <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                         stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
-
                             </button>
                             <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                 <li><a href="#" onclick="activateMenu('rent-menu')"
@@ -259,7 +247,6 @@
                                         <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
                                             stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-
                                 </button>
                                 <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
                                     <li><a href="#" onclick="activateMenu('sell-menu')"
@@ -313,15 +300,15 @@
                             international brand
                             specializes in property appraisal, sales, purchases, and investments. Trust us to deliver
                             exceptional service and help you find your perfect real estate opportunity.</p>
-                        <img src="assets/images/png/platform.png" alt="plateform"
+                        <img src="assets/images/webp/platform.webp" alt="plateform"
                             class="xl:size-[181px] lg:size-[150px`] md:size-32 sm:size-24 size-20 lg:mt-9 md:mt-9 sm:mt-7 mt-5 pointer-events-none">
                     </div>
                     <div
                         class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[38%] md:top-[44%] sm:top-[56%] top-[63%] xl:left-[39%] lg:left-[37%] md:left-[48%] sm:left-[28%] left-[27%]">
-                        <img src="assets/images/png/pool.png" alt="pool-img"
+                        <img src="assets/images/webp/pool.webp" alt="pool-img"
                             class="2xl:max-w-[905px] xl:max-w-[700px] lg:max-w-[550px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px] pointer-events-none">
                         <div class="absolute top-[24%] left-[2%]">
-                            <img src="assets/images/png/pool-layer.png" alt="pool-layer"
+                            <img src="assets/images/webp/pool-layer.webp" alt="pool-layer"
                                 class="2xl:max-w-[854px] xl:max-w-[650px] lg:max-w-[510px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px] pointer-events-none">
                         </div>
                         <div
@@ -340,7 +327,7 @@
                 <div class="flex xl:justify-between xl:pb-[181px] lg:pb-16 md:pb-10 sm:pb-8 pb-6 flex-wrap">
                     <div class="flex-col">
                         <div class="flex gap-[26px]">
-                            <img src="assets/images/png/star-circle.png" alt="star"
+                            <img src="assets/images/webp/star-circle.webp" alt="star"
                                 class="lg:size-[122px] md:size-[75px] size-[65px] pointer-events-none">
                             <p
                                 class="font-medium text-white md:text-custom-lg text-2xl leading-custom-lg font-satoshi-sans text-center pt-[34px]">
@@ -408,9 +395,9 @@
                 <!----------VIDEO PART------------->
                 <div class="relative w-full overflow-hidden ">
                     <div class="relative w-full xl:h-[740px] lg:h-[567px] md:h-[450px]">
-                        <img id="dream-image" src="assets/images/png/dream-house-image.png" alt="Dream House"
+                        <img id="dream-image" src="assets/images/webp/dream-house-image.webp" alt="Dream House"
                             class="xl:!max-w-[1325px] lg:max-w-[980px] md:max-w-[700px] max-md:w-[590px] object-cover rounded-[4000px] object-center absolute xl:h-[594px] lg:h-[402px] md:h-[303px] h-[350px] max-sm:h-[140px] w-full xl:left-[2%] left-0 pointer-events-none">
-                        <img src="assets/images/png/dream-house-layer.png" alt="layer"
+                        <img src="assets/images/webp/dream-house-layer.webp" alt="layer"
                             class="absolute xl:top-[31%] lg:top-[26%] md:top-[26%] max-md:top-[2%] max-sm:top-[24%] top-[26%] xl:max-w-[1300px] lg:max-w-[960px] md:max-w-[690px] sm:max-w-[500px] xl:left-[3%] md:left-[1%] left-0 pointer-events-none">
                         <div
                             class="xl:!w-[1305px] lg:w-[985px] md:w-[700px] sm:w-[500px] w-[335px] xl:h-[594px] lg:h-[376px] md:h-[303px] h-[220px] rounded-[4000px] overflow-hidden">
@@ -448,7 +435,7 @@
             <div class="container">
                 <div class="flex justify-between items-center flex-wrap">
                     <div class="flex items-center gap-7 max-lg:pb-6">
-                        <img src="./assets/images/png/star-circle.png" alt=""
+                        <img src="./assets/images/webp/star-circle.webp" alt=""
                             class="lg:size-[122px] md:size-[75px] size-[65px] pointer-events-none">
                         <h2
                             class="font-medium lg:text-custom-lg text-white md:leading-custom-lg md:text-4xl sm:text-3xl text-3xl">
@@ -464,11 +451,11 @@
                 <div class="swiper mySwiper xl:pt-16 lg:pt-8 pt-8 lg:pb-11 pb-7">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./assets/images/png/swimming-pool-img.png" alt=""
+                            <img src="./assets/images/webp/swimming-pool-img.webp" alt=""
                                 class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[130px] xl:h-[451px] lg:h-[320px] md:h-[260px] mx-auto pointer-events-none">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./assets/images/png/swimming-pool-img.png" alt=""
+                            <img src="./assets/images/webp/swimming-pool-img.webp" alt=""
                                 class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[130px] xl:h-[451px] lg:h-[320px] md:h-[260px] mx-auto pointer-events-none">
                         </div>
                     </div>
@@ -505,7 +492,7 @@
                 <div class="flex justify-between flex-wrap">
                     <div class="flex-col mr-20">
                         <div class="flex items-center gap-7 xl:pb-[80px] pb-8">
-                            <img src="./assets/images/png/star-circle.png" alt=""
+                            <img src="./assets/images/webp/star-circle.webp" alt=""
                                 class="lg:size-[122px] md:size-[75px] size-[65px] pointer-events-none">
                             <h2
                                 class="font-medium lg:text-custom-lg text-white !md:leading-custom-lg md:text-3xl sm:text-2xl text-2xl">
@@ -530,101 +517,101 @@
                         class="swiper mySwiper2 xl:max-w-[636px] lg:max-w-[535px] md:max-w-[420px] max-w-[202px] m-auto pb-5 xl:pt-32 pt-0">
                         <div class="swiper-wrapper cursor-pointer">
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
-                                <img src="./assets/images/png/table-img.png" alt=""
+                                <img src="./assets/images/png/table-img.png" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="absolute bottom-0 md:left-[19%] xl:left-[31%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
-                                    <img src="./assets/images/png/arrow-img.png" alt=""
+                                    <img src="./assets/images/webp/arrow-img.webp" alt="arrow"
                                         class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                                 </div>
                             </div>
@@ -642,10 +629,10 @@
                     Let's combine our strengths</h2>
                 <div
                     class="absolute xl:top-[41%] lg:top-[31%] md:top-[37%] sm:top-[38%] top-[29%] xl:left-[32%] lg:left-[25%] md:left-[26%] sm:left-[28%] left-[18%]">
-                    <img src="assets/images/png/house.png" alt="pool-img"
+                    <img src="assets/images/webp/pool.webp" alt="pool-img"
                         class="lg:max-w-[557px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px] pointer-events-none">
                     <div class="absolute top-[25%] left-[2%]">
-                        <img src="assets/images/png/house-layer.png" alt="pool-layer"
+                        <img src="assets/images/webp/pool-layer.webp" alt="pool-layer"
                             class="lg:max-w-[526px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px] pointer-events-none">
                     </div>
                     <div
@@ -660,7 +647,7 @@
         <footer id="footer"
             class="bg-green  max-w-[1600px] mx-auto xl:pt-16 lg:pt-12 md:pt-10 pt-8 lg:pb-12 md:pb-10 sm:pb-8 pb-6">
             <div class="container">
-                <a href=""><img src="assets/images/png/footer-logo.png" alt="footer-logo"
+                <a href=""><img src="assets/images/webp/footer-logo.webp" alt="footer-logo"
                         class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3 pointer-events-none"></a>
                 <p
                     class="text-gray max-w-[585px] mx-auto text-center font-medium lg:text-custom-md text-xl leading-custom-xl font-sofia-sans">
