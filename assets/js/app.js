@@ -46,9 +46,14 @@ var swiper2 = new Swiper(".mySwiper2", {
       translate: ["90%", 0, 0],
     },
   },
-  loop: true,
   slideToClickedSlide: true,
-  speed: 1000,
+  speed: 1500,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  smooth: true,
+  loop: true,
 });
 
 // Navbar dropdown JS

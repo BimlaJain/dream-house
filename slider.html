@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>positivus</title>
+    <title>Dream House</title>
     <!---------------custom css link------------------------>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!------------------------------------favicon--------------------------->
     <link rel="shortcut icon" href="assets/images/png/fav.png" type="image/x-icon">
-    <!---------------------------slider link--------------------------------->
+    <!---------------------------swiper link--------------------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!---------------------------------tailwind link-------------------->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -41,6 +41,9 @@
                     colors: {
                         "orange": "#e09b6b",
                         "green": "#1d4734",
+                        "gray": "#a0a0a0",
+                        "off-white": "#E6E8EE",
+
                     },
                     lineHeight: {
                         "custom-base": "110%",
@@ -51,74 +54,369 @@
                         "sans": ["helvetica"],
                         "sofia-sans": ["sofia"],
                         "satoshi-sans": ["satoshi"],
-                        "inter-sans": ["Plus Jakarta Sans", 'sans - serif'],
-                        "plus-sans": ["Inter", 'sans-serif'],
+                        "plus-sans": ["Plus Jakarta Sans"],
+                        "inter-sans": ["Inter", 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'text-gradient': 'linear-gradient(99.73deg, #FFFFFF 42.68%, rgba(255, 255, 255, 0) 103.89%)',
+                        'custom-gradient': 'linear-gradient(180deg, #FFFFFF 40.97%, #000000 193.92%)',
+                        'gradient-text': 'linear-gradient(112.84deg, #FFFFFF 55.43%, rgba(255, 255, 255, 0) 87.88%)',
                     },
                 },
             },
         };
     </script>
-    <style>
-        .swiper-button-next:after,
-        .swiper-button-prev:after {
-            display: none !important;
-        }
-
-        .swiper-button-next svg,
-        .swiper-button-prev svg {
-            width: 35% !important;
-            height: 35% !important;
-        }
-
-        .mySwiper2.swiper {
-            overflow: visible !important;
-            margin-left: 9px;
-        }
-
-        #quality .swiper-slide {
-            filter: blur(7px);
-            width: 500px;
-        }
-
-
-        #quality .swiper-slide-active {
-            filter: blur(0px);
-        }
-
-        #quality .swiper-slide img:not(.arrow-img) {
-            width: 547px;
-        }
-
-        #quality .swiper-slide-active img:not(.arrow-img) {
-            width: 632px;
-        }
-
-        @media (max-width:1024px) {
-            #quality .swiper-slide-active img:not(.arrow-img) {
-                width: 520px !important;
-            }
-
-            #quality .swiper-slide img:not(.arrow-img) {
-                width: 458px;
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <!----------------------hero section----------------------------------->
+    <section class="sm:pt-9 pt-5 pb-24 bg-green relative xl:h-[1047px] lg:h-[875px] sm:h-[656px] h-[550px]">
+        <div class="absolute top-0 right-0 max-w-[830px]"><img src="./assets/images/png/hero-layer.png" alt="layer">
+        </div>
+        <div class="container">
+            <nav class="flex justify-between items-center">
+                <a href="#"><img src="assets/images/png/logo.png" alt="logo" class="w-60 h-16"></a>
+                <div class="lg:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none z-30 relative pr-4">
+                        <!-- Hamburger Icon (default) -->
+                        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <!-- Cross Icon (hidden by default) -->
+                        <svg id="close-icon" class="hidden w-6 h-6" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="lg:flex hidden space-x-4 bg-off-white p-2 rounded-full items-center">
+                    <!-- Home Button -->
+                    <li id="home-menu" class=" rounded-full active">
+                        <a href="#" onclick="activateMenu('home-menu')"
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black hover:border-black hover:border">Home</a>
+                    </li>
+
+                    <!-- Properties Button -->
+                    <li id="properties-menu">
+                        <a href="#" onclick="activateMenu('properties-menu')"
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black focus:outline-none hover:border-black hover:border">
+                            Properties
+                        </a>
+                    </li>
+
+                    <!-- Dropdown for Buy -->
+                    <li id="buy-menu" class="relative">
+                        <button onclick="toggleDropdown('buy-menu')"
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black flex items-center gap-1 focus:outline-none hover:border-black hover:border">
+                            Buy
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                            <li><a href="#" onclick="activateMenu('buy-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                            <li><a href="#" onclick="activateMenu('buy-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                            <li><a href="#" onclick="activateMenu('buy-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown for Sell -->
+                    <li id="sell-menu" class="relative">
+                        <button onclick="toggleDropdown('sell-menu')"
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                            Sell
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                            <li><a href="#" onclick="activateMenu('sell-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                            <li><a href="#" onclick="activateMenu('sell-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                            <li><a href="#" onclick="activateMenu('sell-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown for Rent -->
+                    <li id="rent-menu" class="relative">
+                        <button onclick="toggleDropdown('rent-menu')"
+                            class="px-4 py-2 font-sofia-sans rounded-full text-black flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                            Rent
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                    stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                        <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                            <li><a href="#" onclick="activateMenu('rent-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 1</a></li>
+                            <li><a href="#" onclick="activateMenu('rent-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 2</a></li>
+                            <li><a href="#" onclick="activateMenu('rent-menu')"
+                                    class="block px-4 py-2 hover:bg-gray-100">Option 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="bg-off-white rounded-full p-2 px-4 lg:flex hidden justify-center items-center gap-3">
+                    <li
+                        class="font-medium font-sofia-sans text-lg leading-custom-lg text-black hover:bg-green hover:text-white py-3 rounded-full px-2 cursor-pointer">
+                        Login</li>
+                    <li
+                        class="font-medium font-sofia-sans text-lg leading-custom-lg hover:text-black bg-green hover:bg-gray-100 text-white py-3 px-4 rounded-full cursor-pointer">
+                        Get started</li>
+                </ul>
+                <div id="mobile-menu"
+                    class="hidden fixed inset-0 z-10 bg-green text-white flex flex-col items-center justify-center space-y-6 text-xl">
+                    <ul class=" space-x-4 p-2 rounded-full items-center">
+                        <li id="home-menu" class=" rounded-full active">
+                            <a href="#" onclick="activateMenu('home-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-white hover:border-black hover:border">Home</a>
+                        </li>
+
+                        <li id="properties-menu">
+                            <a href="#" onclick="activateMenu('properties-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-white focus:outline-none hover:border-black hover:border">
+                                Properties
+                            </a>
+                        </li>
+                        <li id="buy-menu" class="relative">
+                            <button onclick="toggleDropdown('buy-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-white flex items-center gap-1 focus:outline-none hover:border-black hover:border">
+                                Buy
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                        stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                            <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                <li><a href="#" onclick="activateMenu('buy-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a>
+                                </li>
+                                <li><a href="#" onclick="activateMenu('buy-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a>
+                                </li>
+                                <li><a href="#" onclick="activateMenu('buy-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="sell-menu" class="relative">
+                            <button onclick="toggleDropdown('sell-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-white flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                Sell
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                        stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+
+                            </button>
+                            <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                <li><a href="#" onclick="activateMenu('sell-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a>
+                                </li>
+                                <li><a href="#" onclick="activateMenu('sell-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a>
+                                </li>
+                                <li><a href="#" onclick="activateMenu('sell-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="rent-menu" class="relative">
+                            <button onclick="toggleDropdown('rent-menu')"
+                                class="px-4 py-2 font-sofia-sans rounded-full text-white flex gap-1 items-center focus:outline-none hover:border-black hover:border">
+                                Rent
+                                <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.037 5.73138L8.49993 10.2684L3.96289 5.73138" stroke="#878787"
+                                        stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <ul class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg hidden">
+                                <li><a href="#" onclick="activateMenu('rent-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 1</a>
+                                </li>
+                                <li><a href="#" onclick="activateMenu('rent-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 2</a>
+                                </li>
+                                <li><a href="#" onclick="activateMenu('rent-menu')"
+                                        class="block px-4 py-2 hover:bg-gray-100">Option 3</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li
+                            class="font-medium font-sofia-sans text-lg leading-custom-lg text-white hover:bg-green hover:text-white py-3 rounded-full px-2 cursor-pointer">
+                            Login</li>
+                        <li
+                            class="font-medium font-sofia-sans text-lg leading-custom-lg hover:text-black bg-green hover:bg-gray-100 text-white py-3 px-4 rounded-full cursor-pointer">
+                            Get started</li>
+                    </ul>
+                </div>
+
+            </nav>
+            <h1
+                class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-8xl md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-16 md:pt-12 pt-0 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
+                Experience the epitome of home comfort</h1>
+            <div class="flex">
+                <div class="flex-col">
+                    <p class="max-w-[368px] font-sofia-sans font-normal text-white opacity-60 leading-custom-xl">Our
+                        international brand
+                        specializes in property appraisal, sales, purchases, and investments. Trust us to deliver
+                        exceptional service and help you find your perfect real estate opportunity.</p>
+                    <img src="assets/images/png/platform.png" alt="plateform"
+                        class="lg:size-[181px] md:size-32 sm:size-24 size-20 lg:mt-11 md:mt-9 sm:mt-7 mt-5">
+                </div>
+                <div
+                    class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[51%] md:top-[44%] sm:top-[56%] top-[66%] xl:left-[41%] lg:left-[37%] md:left-[48%] sm:left-[28%] left-[30%]">
+                    <img src="assets/images/png/pool.png" alt="pool-img"
+                        class="2xl:max-w-[905px] xl:max-w-[700px] lg:max-w-[600px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px]">
+                    <div class="absolute top-[23%] left-[2%]">
+                        <img src="assets/images/png/pool-layer.png" alt="pool-layer"
+                            class="2xl:max-w-[854px] xl:max-w-[650px] lg:max-w-[550px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px]">
+                    </div>
+                    <div
+                        class="bg-orange absolute right-[-2%] top-[10%] rounded-full md:p-7 sm:p-6 p-4 flex items-center justify-center lg:size-[153px] md:size-24 sm:size-20 size-14">
+                        <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------ABOUT US---------------->
+    <section class="bg-black xl:pt-[155px] md:pt-24 sm:pt-18 pt-12 lg:pb-20 md:pb-16 pb-4">
+        <div class="container">
+            <div
+                class="flex xl:justify-between xl:pb-[181px] lg:pb-40 md:pb-28 sm:pb-20 pb-16 flex-wrap justify-center">
+                <div class="flex-col">
+                    <div class="flex gap-[26px] justify-center">
+                        <img src="assets/images/png/star-circle.png" alt="star"
+                            class="md:size-[122px] size-[108px] pointer-events-none">
+                        <p
+                            class="font-medium text-white md:text-custom-lg text-2xl leading-custom-lg font-satoshi-sans text-center pt-[34px]">
+                            About Us</p>
+                    </div>
+                    <p
+                        class="font-medium text-lg text-gray lg:max-w-[333px] xl:pt-[236px] lg:pt-20 md:pt-16 pt-12 leading-custom-xl pb-4 max-xl:text-center font-sofia-sans">
+                        We take
+                        great pride in ensuring the satisfaction of our customers. That's why we proudly
+                        guarantee the quality and
+                        reliability of our products.</p>
+                    <button
+                        class="max-xl:mt-5 max-xl:mx-auto flex font-bold text-lg leading-custom-lg py-5 px-[38px] hover:before:bg-white  rounded-full relative overflow-hidden border-2 border-orange bg-orange  text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full"><span
+                            class="relative z-10">Get Started</span></button>
+                </div>
+                <div class="flex-col">
+                    <h2
+                        class="max-w-[816px] lg:text-7xl sm:text-6xl text-4xl leading-custom-base font-satoshi-sans font-bold uppercase pb-5 max-xl:pt-9 max-xl:text-center bg-text-gradient bg-clip-text text-transparent">
+                        We've found luxury homes for clients for a decade</h2>
+                    <p
+                        class="text-gray max-w-[710px] font-sofia-sans md:text-xl text-lg leading-custom-xl pb-[53px] font-medium max-xl:text-center max-xl:mx-auto">
+                        We take great pride in ensuring the satisfaction of our customers, which is why we guarantee
+                        that
+                        the products we sell
+                        will bring happiness to each and every customer. Our genuine care for customer satisfaction is
+                        what sets us apart.</p>
+                    <div id="counter" class="flex lg:gap-20 sm:gap-14 gap-10 flex-wrap max-xl:justify-center">
+                        <div class="flex-col relative">
+                            <div class="flex gap-2 items-center">
+                                <p class="text-white font-bold font-helvetica-sans md:text-custom-2lg text-5xl leading-custom-lg count"
+                                    data-count="10">0
+                                </p>
+                                <span class="md:text-6xl text-5xl font-semibold text-orange leading-[110%]">+</span>
+                            </div>
+                            <p class="font-medium text-xl leading-custom-lg text-gray pt-[13px] font-inter-sans">Awards
+                                Gained</p>
+                        </div>
+                        <div class="flex-col relative">
+                            <div class="flex gap-2 items-center">
+                                <p class="text-white font-bold font-helvetica-sans md:text-custom-2lg text-5xl leading-custom-lg count"
+                                    data-count="20">0
+                                </p>
+                                <span class="md:text-6xl text-5xl font-semibold text-orange leading-[110%]">+</span>
+                            </div>
+                            <p class="font-medium text-xl leading-custom-lg text-gray pt-[13px] font-inter-sans">Years
+                                of Experience</p>
+                        </div>
+                        <div class="flex-col relative">
+                            <div class="flex gap-2 items-center">
+                                <p class="text-white font-bold font-helvetica-sans md:text-custom-2lg text-5xl leading-custom-lg count"
+                                    data-count="598">0
+                                </p>
+                                <span class="md:text-6xl text-5xl font-semibold text-orange leading-[110%]">+</span>
+                            </div>
+                            <p class="font-medium text-xl leading-custom-lg text-gray pt-[13px] font-inter-sans">Rented
+                                Home Stay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------VIDEO PART------------->
+            <div class="relative w-full overflow-hidden rounded-2xl shadow-lg ">
+                <div
+                    class="bg-[url('assets/images/png/dream-house-image.png')] bg-cover bg-no-repeat absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                </div>
+                <img id="dream-image" src="assets/images/png/dream-house-image.png" alt="Dream House"
+                    class="xl:!max-w-[1380px] lg:max-w-[980px] md:max-w-[700px] max-md:w-[590px] object-cover rounded-2xl relative lg:pb-28 pb-24 ">
+                <img src="assets/images/png/dream-house-layer.png" alt="layer"
+                    class="absolute sm:top-[28%] top-[20%] xl:max-w-[1355px] lg:max-w-[960px] md:max-w-[690px] max-md:w-[450px] sm:left-[1%]left-[0]">
+                <video id="dream-video"
+                    class=" inset-0 !w-[1380px] !h-[656px] mx-auto object-cover rounded-[300px] hidden relative pb-20"
+                    controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute inset-0 flex items-center justify-center top-[-20%]">
+                    <button id="toggle-button" class=" p-4 rounded-full shadow-lg focus:outline-none">
+                        <svg class="max-lg:w-8 max-lg:h-8" width="112" height="112" viewBox="0 0 112 112" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M100.445 56.5714C100.445 81.1174 80.5462 101.016 56.0001 101.016C31.4541 101.016 11.5557 81.1174 11.5557 56.5714C11.5557 32.0254 31.4541 12.127 56.0001 12.127C80.5462 12.127 100.445 32.0254 100.445 56.5714ZM71.039 56.2589C71.4094 56.0451 71.4094 55.5105 71.039 55.2966L48.8961 42.5125C48.5257 42.2986 48.0628 42.5659 48.0628 42.9936V68.562C48.0628 68.9896 48.5257 69.2569 48.8961 69.0431L71.039 56.2589Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    class="absolute lg:bottom-[5%] md:bottom-[11%] sm:bottom-[17%] bottom-[24%] left-0 right-0 bg-opacity-50 text-white text-center py-4 lg:text-custom-xl md:text-7xl sm:text-5xl text-3xl leading-custom-xl font-normal uppercase font-satoshi-sans">
+                    DREAM HOUSE
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!----------------------PROJECT SECTION--------------------------->
     <section id="project"
         class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover bg-no-repeat lg:pt-20 md:pt-12 pt-8">
         <div class="container">
             <div class="flex justify-between items-center flex-wrap">
                 <div class="flex items-center gap-7 max-lg:pb-6">
-                    <img src="./assets/images/png/star-circle.png" alt="" class="lg:size-[122px] size-[95px]">
+                    <img src="./assets/images/png/star-circle.png" alt="" class="lg:size-[122px] size-[65px]">
                     <h2
                         class="font-medium lg:text-custom-lg text-white md:leading-custom-lg md:text-4xl sm:text-3xl text-3xl">
                         The Project</h2>
                 </div>
-                <p
-                    class="font-medium md:text-xl text-lg !leading-custom-xl text-white max-w-[480px] max-sm:pt-5 max-sm:text-center">
+                <p class="font-medium md:text-xl text-lg !leading-custom-xl text-white max-w-[480px] max-sm:pt-0">
                     Together, we can conquer
                     challenges, utilize
                     our strengths, and achieve remarkable success in this ambitious home
@@ -128,16 +426,16 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="./assets/images/png/swimming-pool-img.png" alt=""
-                            class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[200px] xl:h-[451px] lg:h-[320px] md:h-[260px] mx-auto">
+                            class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[130px] xl:h-[451px] lg:h-[320px] md:h-[260px] mx-auto">
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/png/swimming-pool-img.png" alt=""
-                            class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[200px] xl:h-[451px] lg:h-[320px] md:h-[260px] mx-auto">
+                            class="2xl:max-w-[1398px] xl:max-w-[1375px] lg:max-w-[952px] md:max-w-[700px] h-[130px] xl:h-[451px] lg:h-[320px] md:h-[260px] mx-auto">
                     </div>
                 </div>
                 <div class="flex slick-arrow-buttons gap-3 lg:py-16 py-10 mx-3 relative">
                     <button
-                        class="swiper-button-prev absolute bottom-[30%] lg:left-[43%] md:left-[40%] left-[30%] border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 ">
+                        class="swiper-button-prev absolute bottom-[30%] lg:left-[40%] xl:left-[43%] md:left-[40%] left-[30%] border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 text-white">
                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M10.1514 16.7069C9.76092 17.0974 9.12775 17.0974 8.73723 16.7069L2.73723 10.7069C2.34671 10.3163 2.34671 9.68317 2.73723 9.29265L8.73723 3.29265C9.12775 2.90212 9.76092 2.90212 10.1514 3.29265C10.542 3.68317 10.542 4.31634 10.1514 4.70686L5.85855 8.99976L17.4443 8.99976C17.9966 8.99976 18.4443 9.44747 18.4443 9.99976C18.4443 10.552 17.9966 10.9998 17.4443 10.9998L5.85855 10.9998L10.1514 15.2926C10.542 15.6832 10.542 16.3163 10.1514 16.7069Z"
@@ -146,7 +444,7 @@
 
                     </button>
                     <button
-                        class="swiper-button-next absolute bottom-[30%] lg:left-[51%] left-[50%] border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 ">
+                        class="swiper-button-next absolute bottom-[30%] lg:left-[51%] left-[50%] border items-center flex justify-center lg:size-[73px] md:size-[60px] size-[50px] rounded-full cursor-pointer transition-all ease-linear duration-200 text-white">
                         <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M10.8486 3.29289C11.2391 2.90237 11.8722 2.90237 12.2628 3.29289L18.2628 9.29289C18.6533 9.68342 18.6533 10.3166 18.2628 10.7071L12.2628 16.7071C11.8722 17.0976 11.2391 17.0976 10.8486 16.7071C10.458 16.3166 10.458 15.6834 10.8486 15.2929L15.1414 11L3.55566 11C3.00338 11 2.55566 10.5523 2.55566 10C2.55566 9.44771 3.00338 9 3.55566 9L15.1414 9L10.8486 4.70711C10.458 4.31658 10.458 3.68342 10.8486 3.29289Z"
@@ -161,36 +459,39 @@
 
     <!----------------------QUALITY SECTION--------------------------->
     <section id="quality"
-        class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover bg-no-repeat overflow-hidden pb-11 xl:pt-16 pt-8 -mt-1">
+        class="bg-green bg-[url(./assets/images/png/slider-bg-layer.png)] bg-cover relative bg-no-repeat overflow-hidden pb-11 xl:pt-16 pt-8 -mt-1">
         <div class="container">
             <div class="flex justify-between flex-wrap">
                 <div class="flex-col mr-20">
-                    <div class="flex items-center gap-7 xl:pb-36 pb-8">
-                        <img src="./assets/images/png/star-circle.png" alt="" class="md:size-[122px] size-[95px]">
+                    <div class="flex items-center gap-7 xl:pb-[150px] pb-8">
+                        <img src="./assets/images/png/star-circle.png" alt="" class="md:size-[122px] size-[65px]">
                         <h2
-                            class="font-medium lg:text-custom-lg text-white md:leading-custom-lg md:text-2xl sm:text-2xl text-2xl">
+                            class="font-medium lg:text-custom-lg text-white !md:leading-custom-lg md:text-3xl sm:text-2xl text-2xl">
                             Our Quality</h2>
                     </div>
                     <h2
-                        class="font-bold md:pb-7 pb-3 uppercase lg:text-7xl md:text-5xl text-4xl bg-gradient-to-br from-white via-white to-transparent bg-clip-text text-transparent max-w-[570px] leading-custom-base">
+                        class="font-bold md:pb-7 pb-3 uppercase xl:text-7xl lg:text-6xl md:text-4xl text-3xl bg-gradient-to-br from-white via-white to-transparent bg-clip-text text-transparent xl:max-w-[570px] lg:max-w-[617px] leading-custom-base">
                         Design a cozy and fresh interior.</h2>
-                    <p class="max-w-[453px] font-medium md:text-xl text-base text-[#A0A0A0] lg:pb-16 pb-4">Crafting an
+                    <p
+                        class="xl:max-w-[453px] lg:max-w-[544px] md:max-w-[494px] font-medium lg:text-xl text-base text-[#A0A0A0] lg:pb-16 pb-4">
+                        Crafting
+                        an
                         Inviting
                         Haven:
                         Unveiling the
                         Art of Designing a Cozy and Fresh Interior for Unmatched Comfort and Serenity</p>
                     <button
-                        class="py-5 px-10 text-green bg-orange rounded-[111px] xl:mb-0 mb-10 font-medium text-base !leading-5  hover:before:bg-white  relative overflow-hidden border-2 border-orange bg-orange  text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full"><span
+                        class="xl:py-5 lg:py-4 py-3 font-bold lg:px-10 px-6 text-green bg-orange rounded-[111px] xl:mb-0 mb-10 text-lg !leading-5  hover:before:bg-white  relative overflow-hidden border-2 border-orange bg-orange  text-black shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-white before:transition-all before:duration-500 hover:before:left-0 hover:before:w-full"><span
                             class="relative z-10">Get Started</span></button>
                 </div>
                 <div
                     class="swiper mySwiper2 xl:max-w-[636px] lg:max-w-[535px] md:max-w-[420px] max-w-[202px] m-auto pb-5 xl:pt-32 pt-0">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide relative ">
+                        <div class="swiper-slide relative">
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -199,7 +500,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -208,7 +509,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -217,7 +518,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -226,7 +527,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -235,7 +536,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -244,7 +545,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -253,7 +554,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -262,7 +563,7 @@
                             <img src="./assets/images/png/table-img.png" alt=""
                                 class="xl:max-w-[632px] lg:max-w-[500px] image md:max-w-[400px] max-w-[200px] object-contain">
                             <div
-                                class="absolute xl:bottom-[-2%] bottom-[0%] md:bottom-[-2%] md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
+                                class="absolute bottom-0 md:left-[19%] xl:left-[28%] lg:bottom-[-3%] lg:left-[24%] left-[18%] z-10">
                                 <img src="./assets/images/png/arrow-img.png" alt=""
                                     class="md:size-[120px] size-[50px] lg:size-[156px] arrow-img object-contain">
                             </div>
@@ -290,11 +591,128 @@
             </div>
         </div>
     </section>
-    
-    <!--------------------------slider script link------------------------------->
+
+    <!--------------strengths-------------->
+    <section
+        class="bg-black relative xl:h-[850px] lg:h-[600px] md:h-[400px] sm:h-[330px] h-[260px] xl:pt-[134px] lg:pt-24 md:pt-16 sm:pt-12 pt-10">
+        <div class="container">
+            <h2
+                class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium xl:text-custom-xxl lg:text-8xl md:text-6xl sm:text-5xl text-3xl leading-custom-lg max-w-[1344px] mx-auto text-center font-satoshi-sans z-10">
+                Let's combine our strengths</h2>
+            <div
+                class="absolute xl:top-[44%] lg:top-[31%] md:top-[37%] sm:top-[38%] top-[35%] xl:left-[32%] lg:left-[25%] md:left-[26%] sm:left-[28%] left-[18%]">
+                <img src="assets/images/png/house.png" alt="pool-img"
+                    class="lg:max-w-[557px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px]">
+                <div class="absolute top-[23%] left-[2%]">
+                    <img src="assets/images/png/house-layer.png" alt="pool-layer"
+                        class="lg:max-w-[526px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px]">
+                </div>
+                <div
+                    class="bg-orange absolute right-[-16%] top-[33%] rounded-full md:p-7 sm:p-6 p-4 flex items-center justify-center lg:size-[153px] md:size-24 sm:size-20 size-14">
+                    <img src="./assets/images/svg/green-arrow.svg" alt="arrow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---------------FOOTER-------------->
+    <footer class="bg-green lg:pt-16 md:pt-14 pt-12 md:pb-[62px] pb-12">
+        <div class="container">
+            <img src="assets/images/png/footer-logo.png" alt="footer-logo"
+                class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3 pointer-events-none">
+            <p
+                class="text-gray max-w-[585px] mx-auto text-center font-medium lg:text-custom-md text-xl leading-custom-xl font-sofia-sans">
+                We take great pride in ensuring the satisfaction of our customers, which</p>
+            <div class="flex gap-[26px] justify-center pt-[26px] md:pb-[61px] pb-10">
+                <a href="https://www.facebook.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_8298)">
+                            <path
+                                d="M22.7779 11.5554C22.7779 5.41895 17.8033 0.444336 11.6668 0.444336C5.53027 0.444336 0.555664 5.41895 0.555664 11.5554C0.555664 17.1012 4.61881 21.698 9.93066 22.5316V14.7673H7.10948V11.5554H9.93066V9.10753C9.93066 6.32281 11.5895 4.78461 14.1275 4.78461C15.3428 4.78461 16.6147 5.00163 16.6147 5.00163V7.736H15.2137C13.8334 7.736 13.4029 8.59256 13.4029 9.47211V11.5554H16.4845L15.9919 14.7673H13.4029V22.5316C18.7147 21.698 22.7779 17.1012 22.7779 11.5554Z"
+                                fill="#EDEDED" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_8298">
+                                <rect width="22.2222" height="22.2222" fill="white"
+                                    transform="translate(0.555664 0.444336)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_8300)">
+                            <path
+                                d="M7.43547 20.5836C15.8191 20.5836 20.406 13.6361 20.406 7.61308C20.406 7.41777 20.4016 7.21811 20.3929 7.0228C21.2852 6.37752 22.0552 5.57826 22.6668 4.66256C21.8358 5.03228 20.9535 5.27375 20.05 5.3787C21.0013 4.80849 21.7136 3.91272 22.0548 2.85744C21.1599 3.3878 20.1812 3.76192 19.1607 3.96377C18.4731 3.23317 17.564 2.74943 16.5739 2.58733C15.5838 2.42523 14.5679 2.59381 13.6832 3.067C12.7986 3.54019 12.0944 4.29164 11.6796 5.20516C11.2649 6.11869 11.1626 7.14341 11.3886 8.12089C9.57652 8.02996 7.80378 7.55923 6.1853 6.73922C4.56683 5.91922 3.13874 4.76824 1.99363 3.36091C1.41162 4.36436 1.23352 5.55177 1.49553 6.68181C1.75755 7.81185 2.44001 8.79973 3.40422 9.44468C2.68035 9.42169 1.97234 9.2268 1.33868 8.8761V8.93252C1.33803 9.98557 1.70208 11.0063 2.36894 11.8213C3.0358 12.6363 3.96432 13.1952 4.99666 13.403C4.32611 13.5865 3.62234 13.6132 2.93981 13.4811C3.23111 14.3868 3.79789 15.1788 4.56103 15.7468C5.32418 16.3149 6.24562 16.6304 7.19675 16.6495C5.58201 17.9179 3.58733 18.6059 1.53399 18.6027C1.16985 18.6021 0.806061 18.5798 0.44458 18.5358C2.53056 19.8741 4.95711 20.5849 7.43547 20.5836Z"
+                                fill="#EDEDED" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_8300">
+                                <rect width="22.2222" height="22.2222" fill="white"
+                                    transform="translate(0.44458 0.444336)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_8302)">
+                            <path
+                                d="M11.4446 2.4452C14.4134 2.4452 14.7649 2.45822 15.9325 2.51031C17.0175 2.55805 17.6035 2.74034 17.9941 2.89225C18.5106 3.09191 18.8838 3.33496 19.2701 3.72125C19.6608 4.11187 19.8995 4.48079 20.0991 4.99729C20.251 5.38791 20.4333 5.97819 20.4811 7.05892C20.5332 8.23079 20.5462 8.58236 20.5462 11.5468C20.5462 14.5155 20.5332 14.8671 20.4811 16.0346C20.4333 17.1197 20.251 17.7056 20.0991 18.0962C19.8995 18.6127 19.6564 18.986 19.2701 19.3723C18.8795 19.7629 18.5106 20.0016 17.9941 20.2013C17.6035 20.3532 17.0132 20.5355 15.9325 20.5832C14.7606 20.6353 14.409 20.6483 11.4446 20.6483C8.47586 20.6483 8.1243 20.6353 6.95676 20.5832C5.87169 20.5355 5.28575 20.3532 4.89513 20.2013C4.37864 20.0016 4.00537 19.7586 3.61909 19.3723C3.22846 18.9817 2.98975 18.6127 2.79009 18.0962C2.63818 17.7056 2.45589 17.1153 2.40815 16.0346C2.35607 14.8627 2.34304 14.5112 2.34304 11.5468C2.34304 8.57802 2.35607 8.22645 2.40815 7.05892C2.45589 5.97385 2.63818 5.38791 2.79009 4.99729C2.98975 4.48079 3.2328 4.10753 3.61909 3.72125C4.00971 3.33062 4.37864 3.09191 4.89513 2.89225C5.28575 2.74034 5.87603 2.55805 6.95676 2.51031C8.1243 2.45822 8.47586 2.4452 11.4446 2.4452ZM11.4446 0.444336C8.42811 0.444336 8.05051 0.457357 6.86561 0.50944C5.68506 0.561523 4.87343 0.752496 4.1703 1.02593C3.43679 1.31239 2.81614 1.69 2.19982 2.31066C1.57916 2.92698 1.20155 3.54764 0.915093 4.2768C0.641656 4.98427 0.450684 5.79156 0.3986 6.97211C0.346517 8.16135 0.333496 8.53895 0.333496 11.5554C0.333496 14.5719 0.346517 14.9495 0.3986 16.1344C0.450684 17.315 0.641656 18.1266 0.915093 18.8298C1.20155 19.5633 1.57916 20.1839 2.19982 20.8002C2.81614 21.4166 3.4368 21.7985 4.16596 22.0806C4.87343 22.3541 5.68072 22.545 6.86127 22.5971C8.04617 22.6492 8.42377 22.6622 11.4403 22.6622C14.4568 22.6622 14.8344 22.6492 16.0193 22.5971C17.1998 22.545 18.0114 22.3541 18.7146 22.0806C19.4437 21.7985 20.0644 21.4166 20.6807 20.8002C21.297 20.1839 21.679 19.5633 21.9611 18.8341C22.2345 18.1266 22.4255 17.3193 22.4776 16.1388C22.5297 14.9539 22.5427 14.5763 22.5427 11.5598C22.5427 8.54329 22.5297 8.16569 22.4776 6.98079C22.4255 5.80024 22.2345 4.98861 21.9611 4.28548C21.6877 3.54763 21.3101 2.92698 20.6894 2.31066C20.0731 1.69434 19.4524 1.31239 18.7233 1.03027C18.0158 0.756836 17.2085 0.565864 16.0279 0.51378C14.8387 0.457357 14.4611 0.444336 11.4446 0.444336Z"
+                                fill="#EDEDED" />
+                            <path
+                                d="M11.4445 5.84814C8.29348 5.84814 5.73706 8.40457 5.73706 11.5556C5.73706 14.7067 8.29348 17.2631 11.4445 17.2631C14.5956 17.2631 17.152 14.7067 17.152 11.5556C17.152 8.40457 14.5956 5.84814 11.4445 5.84814ZM11.4445 15.2579C9.40026 15.2579 7.74227 13.5999 7.74227 11.5556C7.74227 9.51134 9.40026 7.85335 11.4445 7.85335C13.4888 7.85335 15.1468 9.51134 15.1468 11.5556C15.1468 13.5999 13.4888 15.2579 11.4445 15.2579Z"
+                                fill="#EDEDED" />
+                            <path
+                                d="M18.7103 5.62251C18.7103 6.36035 18.1114 6.95497 17.3779 6.95497C16.64 6.95497 16.0454 6.35601 16.0454 5.62251C16.0454 4.88466 16.6444 4.29004 17.3779 4.29004C18.1114 4.29004 18.7103 4.889 18.7103 5.62251Z"
+                                fill="#EDEDED" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_8302">
+                                <rect width="22.2222" height="22.2222" fill="white"
+                                    transform="translate(0.333496 0.444336)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="https://in.linkedin.com/" target="_blank"><svg width="23" height="23" viewBox="0 0 23 23"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1_8307)">
+                            <path
+                                d="M20.7997 0.444336H1.86304C0.955919 0.444336 0.222412 1.16048 0.222412 2.0459V21.0607C0.222412 21.9461 0.955919 22.6666 1.86304 22.6666H20.7997C21.7068 22.6666 22.4446 21.9461 22.4446 21.065V2.0459C22.4446 1.16048 21.7068 0.444336 20.7997 0.444336ZM6.81529 19.381H3.51668V8.77333H6.81529V19.381ZM5.16599 7.32802C4.10696 7.32802 3.25193 6.47298 3.25193 5.41829C3.25193 4.36361 4.10696 3.50857 5.16599 3.50857C6.22068 3.50857 7.07571 4.36361 7.07571 5.41829C7.07571 6.46864 6.22068 7.32802 5.16599 7.32802ZM19.159 19.381H15.8648V14.2247C15.8648 12.9964 15.8431 11.4122 14.1504 11.4122C12.436 11.4122 12.1755 12.7534 12.1755 14.1379V19.381H8.88561V8.77333H12.0453V10.223H12.0887C12.5271 9.38965 13.6035 8.50857 15.2051 8.50857C18.5427 8.50857 19.159 10.7048 19.159 13.5607V19.381Z"
+                                fill="#EDEDED" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_8307">
+                                <rect width="22.2222" height="22.2222" fill="white"
+                                    transform="translate(0.222412 0.444336)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+            <div class="border-b border-gray"></div>
+            <div class="flex pt-9 justify-center flex-wrap">
+                <a href=""
+                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none pr-10 lg:pr-[72px] font-plus-sans">HOME</a>
+                <a href=""
+                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none px-10 lg:px-[72px] font-plus-sans">ABOUT</a>
+                <a href=""
+                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none px-10 lg:px-[72px] font-plus-sans max-sm:mt-5">PROPERTIES</a>
+                <a href=""
+                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg lg:border-r border-gray border-r-none px-10 lg:px-[72px] font-plus-sans max-sm:mt-5">BLOG</a>
+                <a href=""
+                    class="text-white font-medium md:text-custom-sm text-lg leading-custom-lg px-10 xl:mt-0 max-xl:mt-10 max-lg:mt-5 lg:px-[72px] font-plus-sans">PRICING</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--------------------------swiper script link------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!------------------------js link--------------------------->
-    <script src="assets/js/app.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 
 </html>
