@@ -41,3 +41,6 @@ document.getElementById('toggle-button').addEventListener('click', function () {
         video.currentTime = 0;
     }
 });
+document.getElementById('toggle-button').addEventListener('click', function () {
+    this.remove(); 
+});
