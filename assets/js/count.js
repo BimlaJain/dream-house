@@ -1,17 +1,14 @@
-// counter js 
-var counted = 0;
+
+// Counter JS
+let counted = false;
 $(window).scroll(function () {
-    var oTop = $("#counter").offset().top - window.innerHeight;
-    if (counted == 0 && $(window).scrollTop() > oTop) {
+    const oTop = $("#counter").offset().top - window.innerHeight;
+    if (!counted && $(window).scrollTop() > oTop) {
         $(".count").each(function () {
-            var $this = $(this),
-                countTo = $this.attr("data-count");
-            $({
-                countNum: $this.text(),
-            }).animate(
-                {
-                    countNum: countTo,
-                },
+            const $this = $(this);
+            const countTo = $this.attr("data-count");
+            $({ countNum: $this.text() }).animate(
+                { countNum: countTo },
                 {
                     duration: 2000,
                     easing: "swing",
@@ -24,24 +21,26 @@ $(window).scroll(function () {
                 }
             );
         });
-        counted = 1;
+        counted = true;
     }
 });
 
-// video js
+// Video JS
 document.getElementById('toggle-button').addEventListener('click', function () {
-    var image = document.getElementById('dream-image');
-    var video = document.getElementById('dream-video');
+    const image = document.getElementById('dream-image');
+    const video = document.getElementById('dream-video');
 
-    if (video.classList.contains('hidden')) {     
+    if (video.classList.contains('hidden')) {
         image.classList.add('hidden');
         video.classList.remove('hidden');
         video.play();
     } else {
         video.classList.add('hidden');
         image.classList.remove('hidden');
-        video.pause(); 
+        video.pause();
         video.currentTime = 0;
     }
 });
-
+document.getElementById('toggle-button').addEventListener('click', function () {
+    this.remove(); 
+});

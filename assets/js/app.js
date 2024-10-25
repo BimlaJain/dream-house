@@ -14,6 +14,9 @@ document.getElementById("toggle-button").addEventListener("click", function () {
     video.currentTime = 0;
   }
 });
+document.getElementById('toggle-button').addEventListener('click', function () {
+  this.remove();
+});
 // Swiper for the first slider (fade effect)
 var swiper = new Swiper(".mySwiper", {
   navigation: {
@@ -48,10 +51,6 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
   slideToClickedSlide: true,
   speed: 1500,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
   smooth: true,
   loop: true,
 });
@@ -77,8 +76,7 @@ function toggleDropdown(menuId) {
 
   if (activeDropdown && activeDropdown !== dropdown) {
     activeDropdown.classList.add("hidden");
-    const activeArrow =
-      activeDropdown.previousElementSibling.querySelector("svg");
+    const activeArrow = activeDropdown.previousElementSibling.querySelector("svg");
     activeArrow.classList.remove("rotate-180");
     activeDropdown.previousElementSibling.classList.remove("border-black");
   }
@@ -88,11 +86,25 @@ function toggleDropdown(menuId) {
     arrow.classList.add("rotate-180");
     button.classList.add("border-black");
     activeDropdown = dropdown;
+    document.addEventListener("click", handleClickOutside);
   } else {
-    dropdown.classList.add("hidden");
-    arrow.classList.remove("rotate-180");
-    button.classList.remove("border-black");
-    activeDropdown = null;
+    closeDropdown(dropdown, arrow, button);
+  }
+}
+
+function closeDropdown(dropdown, arrow, button) {
+  dropdown.classList.add("hidden");
+  arrow.classList.remove("rotate-180");
+  button.classList.remove("border-black");
+  activeDropdown = null;
+  document.removeEventListener("click", handleClickOutside);
+}
+
+function handleClickOutside(event) {
+  if (activeDropdown && !activeDropdown.parentElement.contains(event.target)) {
+    const arrow = activeDropdown.previousElementSibling.querySelector("svg");
+    const button = activeDropdown.previousElementSibling;
+    closeDropdown(activeDropdown, arrow, button);
   }
 }
 
@@ -102,8 +114,11 @@ const mobileMenu = document.getElementById("mobile-menu");
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const closeIcon = document.getElementById("close-icon");
 
+// Add event listeners for menu toggle
 menuBtn.addEventListener("click", () => {
   const isMenuOpen = !mobileMenu.classList.contains("hidden");
+  menuBtn.classList.toggle('active');
+  document.body.classList.toggle("overflow-hidden");
 
   if (isMenuOpen) {
     mobileMenu.classList.add("hidden");
@@ -115,6 +130,18 @@ menuBtn.addEventListener("click", () => {
     closeIcon.classList.remove("hidden");
   }
 });
+
+// Function to close the mobile menu
+function closeMenu() {
+  mobileMenu.classList.add("hidden");
+  closeIcon.classList.add("hidden");
+  hamburgerIcon.classList.remove("hidden");
+  document.body.classList.remove("overflow-hidden");
+}
+document.querySelectorAll('#home-menu a, #properties-menu a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
 
 // Counter JS
 var counted = 0;
@@ -145,3 +172,25 @@ $(window).scroll(function () {
     counted = 1;
   }
 });
+
+// back-to-top-button
+const mybutton = document.querySelector(".top-btn");
+const heroSection = document.getElementById("hero");
+
+window.addEventListener("scroll", function () {
+  const heroHeight = heroSection.offsetHeight;
+  if (window.scrollY > 500) {
+    mybutton.classList.remove("hidden"); 
+    mybutton.classList.add("active");  
+  } else {
+    mybutton.classList.add("hidden");   
+    mybutton.classList.remove("active"); 
+  }
+});
+mybutton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
