@@ -112,11 +112,13 @@ function handleClickOutside(event) {
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
 const hamburgerIcon = document.getElementById("hamburger-icon");
-const closeIcon = document.getElementById("close-icon");  
+const closeIcon = document.getElementById("close-icon");
+
+// Add event listeners for menu toggle
 menuBtn.addEventListener("click", () => {
   const isMenuOpen = !mobileMenu.classList.contains("hidden");
   menuBtn.classList.toggle('active');
-  document.body.classList.toggle("overflow-hidden")
+  document.body.classList.toggle("overflow-hidden");
 
   if (isMenuOpen) {
     mobileMenu.classList.add("hidden");
@@ -127,21 +129,21 @@ menuBtn.addEventListener("click", () => {
     hamburgerIcon.classList.add("hidden");
     closeIcon.classList.remove("hidden");
   }
-  menuBtn.addEventListener("click", () => {
-    const isMenuOpen = !mobileMenu.classList.contains("hidden");
-    if (isMenuOpen) {
-      // Close mobile menu
-      mobileMenu.classList.add("hidden");
-      closeIcon.classList.add("hidden");
-      hamburgerIcon.classList.remove("hidden");
-    } else {
-      // Open mobile menu
-      mobileMenu.classList.remove("hidden");
-      closeIcon.classList.remove("hidden");
-      hamburgerIcon.classList.add("hidden");
-    }
-  });
 });
+
+// Function to close the mobile menu
+function closeMenu() {
+  mobileMenu.classList.add("hidden");
+  closeIcon.classList.add("hidden");
+  hamburgerIcon.classList.remove("hidden");
+  document.body.classList.remove("overflow-hidden");
+}
+
+// Add event listeners to close menu when clicking Home or Properties
+document.querySelectorAll('#home-menu a, #properties-menu a').forEach(link => {
+  link.addEventListener('click', closeMenu);
+});
+
 
 // Counter JS
 var counted = 0;

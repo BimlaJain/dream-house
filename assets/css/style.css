@@ -60,6 +60,7 @@
 
 #quality .swiper-slide-active {
     filter: blur(0px);
+    padding-bottom: 90px;
 }
 
 #quality .swiper-slide img:not(.arrow-img) {
@@ -78,4 +79,8 @@
     #quality .swiper-slide img:not(.arrow-img) {
         width: 458px;
     }
+        #quality .swiper-slide-active {
+            filter: blur(0px);
+            padding-bottom: 20px;
+        }
 }
