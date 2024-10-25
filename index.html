@@ -90,16 +90,16 @@
     <body class="scroll-smooth bg-black">
         <!----------------------hero section----------------------------------->
         <section id="hero"
-            class="sm:pt-9 max-w-[1600px] mx-auto relative pt-5 bg-green xl:h-[1047px] lg:h-[634px] sm:h-[622px] h-[520px]">
+            class="sm:pt-9 relative pt-5 bg-green xl:h-[1047px] lg:h-[634px] sm:h-[622px] h-[520px]">
             <div
                 class="absolute top-0 right-0 xl:max-w-[830px] lg:max-w-[600px] md:max-w-[600px] sm:max-w-[350px] max-w-[250px] pointer-events-none">
                 <img src="./assets/images/webp/hero-layer.webp" alt="layer" class="pointer-events-none">
             </div>
-            <div class="container">
+            <div class="container max-w-[1560px] mx-auto">
                 <nav class="flex justify-between items-center">
                     <a href="#"><img src="assets/images/webp/logo.webp" alt="logo" class="w-60 h-16"></a>
                     <div class="lg:hidden pt-2">
-                        <button id="menu-btn" class="text-white focus:outline-none z-30 relative pr-4">
+                        <button id="menu-btn" class="text-white focus:outline-none z-30 relative lg:pr-4">
                             <svg id="hamburger-icon" class="w-9 h-9" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -296,19 +296,19 @@
                     </div>
                 </nav>
                 <h1
-                    class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-[60px] md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-8 md:pt-6 pt-0 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
+                    class="font-satoshi-sans font-bold xl:text-custom-2xl lg:text-[60px] md:text-6xl sm:text-4xl text-3xl uppercase leading-custom-lg xl:pt-[72px] lg:pt-8 md:pt-6 pt-2 md:pb-7 pb-4 bg-clip-text text-transparent bg-gradient-text">
                     Experience the epitome of home comfort</h1>
                 <div class="flex">
                     <div class="flex-col">
-                        <p class="max-w-[438px] font-sofia-sans md:text-xl text-lg font-normal text-white opacity-60 leading-custom-xl">Our
+                        <p class="lg:max-w-[438px] md:max-w-[375px] max-w-[438px] font-sofia-sans md:text-xl text-lg font-normal text-white opacity-60 leading-custom-xl">Our
                             international brand
                             specializes in property appraisal, sales, purchases, and investments. Trust us to deliver
                             exceptional service and help you find your perfect real estate opportunity.</p>
                         <img src="assets/images/webp/platform.webp" alt="plateform"
-                            class="xl:size-[181px] lg:size-[150px`] md:size-32 sm:size-24 size-20 lg:mt-9 md:mt-9 sm:mt-7 mt-5 pointer-events-none">
+                            class="xl:size-[181px] lg:size-[150px`] md:size-32 sm:size-24 size-20 lg:mt-9 md:mt-2 sm:mt-7 mt-5 pointer-events-none">
                     </div>
                     <div
-                        class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[38%] md:top-[44%] sm:top-[56%] top-[63%] xl:left-[39%] lg:left-[37%] md:left-[48%] sm:left-[28%] left-[27%]">
+                        class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[38%] md:top-[44%] sm:top-[56%] top-[67%] xl:left-[39%] lg:left-[43%] md:left-[48%] sm:left-[28%] left-[27%]">
                         <img src="assets/images/webp/pool.webp" alt="pool-img"
                             class="2xl:max-w-[905px] xl:max-w-[700px] lg:max-w-[550px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px] pointer-events-none">
                         <div class="absolute top-[24%] left-[2%]">
@@ -316,8 +316,8 @@
                                 class="2xl:max-w-[854px] xl:max-w-[650px] lg:max-w-[510px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px] pointer-events-none">
                         </div>
                         <div
-                            class="bg-orange absolute right-[-2%] top-[10%] rounded-full lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                            <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="pointer-events-none">
+                            class="bg-orange absolute right-[-2%] top-[10%] rounded-full lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
+                            <img src="./assets/images/svg/hero-arrow.svg" alt="arrow" class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                         </div>
                     </div>
                 </div>
@@ -326,7 +326,7 @@
 
         <!-------------ABOUT US---------------->
         <section id="about"
-            class="bg-black  max-w-[1600px] mx-auto xl:pt-[155px] lg:pt-12 md:pt-10 sm:pt-9 pt-8 md:pb-0 pb-4">
+            class="bg-black xl:pt-[155px] lg:pt-12 md:pt-10 sm:pt-9 pt-8 md:pb-0 pb-4">
             <div class="container">
                 <div class="flex xl:justify-between xl:pb-[181px] lg:pb-16 md:pb-10 sm:pb-8 pb-6 flex-wrap">
                     <div class="flex-col">
@@ -334,7 +334,7 @@
                             <img src="assets/images/webp/star-circle.webp" alt="star"
                                 class="lg:size-[122px] md:size-[75px] size-[65px] pointer-events-none">
                             <p
-                                class="font-medium text-white md:text-custom-lg text-2xl leading-custom-lg font-satoshi-sans text-center sm:pt-[34px] pt-4">
+                                class="font-medium text-white md:text-custom-lg text-2xl leading-custom-lg font-satoshi-sans text-center lg:pt-[34px] pt-2">
                                 About Us</p>
                         </div>
                         <p
@@ -435,7 +435,7 @@
 
         <!----------------------PROJECT SECTION--------------------------->
         <section id="project"
-            class="bg-green  max-w-[1600px] mx-auto bg-[url(./assets/images/webp/slider-bg-layer.webp)] bg-cover bg-no-repeat xl:pt-20 lg:pt-12 md:pt-10 pt-8">
+            class="bg-green bg-[url(./assets/images/webp/slider-bg-layer.webp)] bg-cover bg-no-repeat xl:pt-20 lg:pt-12 md:pt-10 pt-8">
             <div class="container">
                 <div class="flex justify-between items-center flex-wrap">
                     <div class="flex items-center gap-7 max-lg:pb-6">
@@ -491,10 +491,10 @@
 
         <!----------------------QUALITY SECTION--------------------------->
         <section id="quality"
-            class="bg-green  max-w-[1600px] mx-auto bg-[url(./assets/images/webp/slider-bg-layer.webp)] bg-cover relative bg-no-repeat overflow-hidden xl:pb-11 lg:pb-12 md:pb-10 sm:pb-8 pb-6 xl:pt-16 lg:pt-4 pt-0 -mt-1">
+            class="bg-green bg-[url(./assets/images/webp/slider-bg-layer.webp)] bg-cover relative bg-no-repeat overflow-hidden xl:pb-11 lg:pb-12 md:pb-10 sm:pb-8 pb-6 xl:pt-16 lg:pt-4 pt-0 -mt-1">
             <div class="container">
                 <div class="flex justify-between flex-wrap">
-                    <div class="flex-col mr-20">
+                    <div class="flex-col xl:mr-20">
                         <div class="flex items-center gap-7 xl:pb-[80px] pb-8">
                             <img src="./assets/images/webp/star-circle.webp" alt=""
                                 class="lg:size-[122px] md:size-[75px] size-[65px] pointer-events-none">
@@ -524,99 +524,99 @@
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
+                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
                                     <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="pointer-events-none">
+                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                                 </div>
                             </div>
                         </div>
@@ -626,8 +626,8 @@
         </section>
         <!--------------strengths-------------->
         <section id="strength"
-            class="bg-black max-w-[1600px] mx-auto relative xl:h-[850px] lg:h-[550px] md:h-[400px] sm:h-[330px] h-[265px] xl:pt-[134px] lg:pt-12 md:pt-10 sm:pt-8 pt-6">
-            <div class="container">
+            class="bg-black relative xl:h-[850px] lg:h-[550px] md:h-[400px] sm:h-[330px] h-[265px] xl:pt-[134px] lg:pt-12 md:pt-10 sm:pt-8 pt-6">
+            <div class="container max-w-[1560px] mx-auto">
                 <h2
                     class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium xl:text-custom-xxl lg:text-6xl md:text-6xl sm:text-5xl text-3xl leading-custom-lg xl:max-w-[1344px] mx-auto text-center font-satoshi-sans z-10 max-w-[600px]">
                     Let's combine our strengths</h2>
@@ -640,8 +640,8 @@
                             class="lg:max-w-[526px] md:max-w-[350px] sm:max-w-[280px] max-w-[240px] pointer-events-none">
                     </div>
                     <div
-                        class="bg-orange absolute right-[-6%] top-[46%] rounded-full lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer">
-                        <img src="./assets/images/svg/green-arrow.svg" alt="arrow">
+                        class="bg-orange absolute right-[-6%] top-[46%] rounded-full lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
+                        <img src="./assets/images/svg/green-arrow.svg" alt="arrow" class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
                     </div>
                 </div>
             </div>
@@ -649,7 +649,7 @@
 
         <!---------------FOOTER-------------->
         <footer id="footer"
-            class="bg-green  max-w-[1600px] mx-auto xl:pt-16 lg:pt-12 md:pt-10 pt-8 lg:pb-12 md:pb-10 sm:pb-8 pb-6">
+            class="bg-green xl:pt-16 lg:pt-12 md:pt-10 pt-8 lg:pb-9 md:pb-7 pb-5">
             <div class="container">
                 <a href=""><img src="assets/images/webp/footer-logo.webp" alt="footer-logo"
                         class="max-w-[240px] mx-auto xl:pb-8 lg:pb-5 pb-3 pointer-events-none"></a>
@@ -729,7 +729,7 @@
                     </a>
                 </div>
                 <div class="border-b border-gray"></div>
-                <div class="flex pt-9 justify-center flex-wrap">
+                <div class="flex lg:pt-9 md:pt-7 pt-5 justify-center flex-wrap">
                     <a href="#hero"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg sm:border-r border-gray border-r-none md:pr-10 sm:px-6 pe-8 pl-2 xl:pr-[72px] lg:px-[50px] font-plus-sans max-sm:mb-5 hover:text-black transition-all duration-500">HOME</a>
                     <a href="#about"
@@ -743,7 +743,7 @@
                 </div>
             </div>
             <div
-                class="top-btn w-14 h-14 rounded-full fixed bottom-7 right-7 bg-darkblue z-20 p-2 bg-blue-600 cursor-pointer flex justify-center items-center transition">
+                class="top-btn md:size-14 sm:size-10 size-9 rounded-full fixed bottom-7 right-7 bg-darkblue z-20 p-2 bg-orange cursor-pointer flex justify-center items-center transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="white"
                     class="bi bi-chevron-double-up" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
