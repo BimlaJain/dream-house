@@ -138,8 +138,6 @@ function closeMenu() {
   hamburgerIcon.classList.remove("hidden");
   document.body.classList.remove("overflow-hidden");
 }
-
-// Add event listeners to close menu when clicking Home or Properties
 document.querySelectorAll('#home-menu a, #properties-menu a').forEach(link => {
   link.addEventListener('click', closeMenu);
 });
@@ -177,18 +175,22 @@ $(window).scroll(function () {
 
 // back-to-top-button
 const mybutton = document.querySelector(".top-btn");
-const show = document.querySelector(".active")
+const heroSection = document.getElementById("hero");
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 900) {
-    mybutton.classList.add("active")
+  const heroHeight = heroSection.offsetHeight;
+  if (window.scrollY > 500) {
+    mybutton.classList.remove("hidden"); 
+    mybutton.classList.add("active");  
+  } else {
+    mybutton.classList.add("hidden");   
+    mybutton.classList.remove("active"); 
   }
-  else {
-    mybutton.classList.remove("active")
-  }
-})
+});
 mybutton.addEventListener("click", function () {
-  document.documentElement.scrollTop = 0;
-
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
 

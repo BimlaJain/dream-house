@@ -45,7 +45,7 @@
                                 md: "768px",
                                 lg: "1024px",
                                 xl: "1140px",
-                                '2xl': "1422px",
+                                '2xl': "1536px",
                             },
                         },
                         fontSize: {
@@ -87,19 +87,19 @@
         </script>
     </head>
 
-    <body class="bg-black">
+    <body class=" bg-black">
         <!----------------------hero section----------------------------------->
         <section id="hero"
-            class="lg:pt-9 md:pt-6 sm:pt-5 pt-4 relative bg-green xl:h-[1047px] lg:h-[634px] sm:h-[622px] h-[520px]">
+            class="lg:pt-9 md:pt-6 sm:pt-5 pt-4 bg-green xl:h-[1047px] lg:h-[634px] sm:h-[622px] h-[520px]">
             <div
                 class="absolute top-0 right-0 xl:max-w-[830px] lg:max-w-[600px] md:max-w-[600px] sm:max-w-[350px] max-w-[250px] pointer-events-none">
                 <img src="./assets/images/webp/hero-layer.webp" alt="layer" class="pointer-events-none">
             </div>
-            <div class="container max-w-[1560px] mx-auto">
+            <div class="container relative">
                 <nav class="flex justify-between items-center">
                     <a href="#"><img src="assets/images/webp/logo.png" alt="logo" class="md:w-60 w-44"></a>
                     <div class="lg:hidden pt-2">
-                        <button id="menu-btn" class="text-white focus:outline-none z-30 relative lg:pr-4">
+                        <button id="menu-btn" class="text-white focus:outline-none z-40 relative lg:pr-4">
                             <svg id="hamburger-icon" class="w-9 h-9" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -206,7 +206,7 @@
                         </label>
                     </div>
                     <div id="mobile-menu"
-                        class="hidden fixed inset-0 z-10 bg-green text-white flex flex-col items-center justify-center space-y-6 text-xl">
+                        class="hidden fixed inset-0 z-30 bg-green text-white flex flex-col items-center justify-center space-y-6 text-xl">
                         <ul class="p-2 rounded-full items-center justify-start flex flex-col gap-4 ">
                             <li id="home-menu" class="py-2 rounded-full active">
                                 <a href="#" onclick="activateMenu('home-menu')"
@@ -307,7 +307,7 @@
                             class="xl:size-[181px] lg:size-[150px`] md:size-32 sm:size-24 size-20 lg:mt-9 md:mt-2 sm:mt-7 mt-5 pointer-events-none">
                     </div>
                     <div
-                        class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[38%] md:top-[44%] sm:top-[56%] top-[67%] xl:left-[39%] lg:left-[43%] md:left-[48%] sm:left-[28%] left-[27%]">
+                        class="absolute 2xl:top-[42%] xl:top-[47%] lg:top-[38%] md:top-[44%] sm:top-[56%] top-[77%] xl:left-[39%] lg:left-[43%] md:left-[48%] sm:left-[28%] left-[27%]">
                         <img src="assets/images/webp/pool.webp" alt="pool-img"
                             class="2xl:max-w-[905px] xl:max-w-[700px] lg:max-w-[550px] md:max-w-[380px] sm:max-w-[300px] max-w-[250px] pointer-events-none">
                         <div class="absolute top-[24%] left-[2%]">
@@ -533,8 +533,7 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -542,8 +541,7 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -551,8 +549,7 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -560,8 +557,7 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -569,8 +565,7 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -578,8 +573,7 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
@@ -587,35 +581,31 @@
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
                                     class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                             <div class="swiper-slide relative">
                                 <img src="./assets/images/webp/table-img.webp" alt="table"
                                     class="xl:max-w-[632px] lg:max-w-[520px] md:max-w-[400px] max-w-[200px] image object-contain">
                                 <div
-                                    class="bg-orange absolute bottom-0 md:left-[19%] xl:left-[37%] lg:left-[39%] left-[18%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
-                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow"
-                                        class="transition-transform duration-1000 ease-in-out group-hover:rotate-[45deg]">
+                                    class="bg-orange absolute bottom-2 lg:bottom-0 md:bottom-1 md:left-[32%] xl:left-[31%] xl:bottom-[6%] lg:left-[32%] left-[24%] z-10 rounded-full xl:p-12 lg:p-6 md:p-5 sm:p-4 p-3 flex items-center justify-center xl:size-[153px] lg:size-20 md:size-16 sm:size-14 size-12 cursor-pointer group">
+                                    <img src="./assets/images/svg/hero-arrow.svg" alt="arrow">
                                 </div>
                             </div>
                         </div>
@@ -625,7 +615,7 @@
         </section>
         <!--------------strengths-------------->
         <section id="strength"
-            class="bg-black relative xl:h-[850px] lg:h-[550px] md:h-[400px] sm:h-[330px] h-[265px] xl:pt-[134px] lg:pt-12 md:pt-10 sm:pt-8 pt-6">
+            class="bg-black max-w-[1600px] mx-auto relative xl:h-[850px] lg:h-[550px] md:h-[400px] sm:h-[330px] h-[265px] xl:pt-[134px] lg:pt-12 md:pt-10 sm:pt-8 pt-6">
             <div class="container max-w-[1560px] mx-auto">
                 <h2
                     class="relative bg-clip-text uppercase text-transparent bg-custom-gradient font-medium xl:text-custom-xxl lg:text-6xl md:text-6xl sm:text-5xl text-3xl leading-custom-lg xl:max-w-[1344px] mx-auto text-center font-satoshi-sans z-10 max-w-[600px]">
@@ -737,7 +727,7 @@
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg sm:border-r border-gray border-r-none md:px-10 sm:px-6 pe-6 pl-1 xl:px-[72px] lg:px-[50px] font-plus-sans max-sm:mb-5 hover:text-black transition-all duration-500">PROPERTIES</a>
                     <a href="#quality"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg sm:border-r border-gray border-r-none md:px-10 px-6 xl:px-[72px] lg:px-[50px] font-plus-sans max-sm:mb-5 hover:text-black transition-all duration-500">BLOG</a>
-                    <a href="footer"
+                    <a href="#footer"
                         class="text-white font-medium xl:text-custom-sm lg:text-lg text-base leading-custom-lg px-10 xl:mt-0 xl:px-[72px] lg:px-[50px] font-plus-sans hover:text-black transition-all duration-500">PRICING</a>
                 </div>
             </div>
