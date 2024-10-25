@@ -37,6 +37,10 @@
     font-weight: 400;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 .swiper-button-next:after,
 .swiper-button-prev:after {
     display: none !important;
@@ -79,10 +83,12 @@
     #quality .swiper-slide img:not(.arrow-img) {
         width: 458px;
     }
-        #quality .swiper-slide-active {
-            padding-bottom: 20px;
-        }
-                #quality .swiper-slide {
-                    padding-bottom: 0px;
-                }
+
+    #quality .swiper-slide-active {
+        padding-bottom: 20px;
+    }
+
+    #quality .swiper-slide {
+        padding-bottom: 0px;
+    }
 }
