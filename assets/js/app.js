@@ -51,10 +51,10 @@ var swiper2 = new Swiper(".mySwiper2", {
   },
   slideToClickedSlide: true,
   speed: 1500,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   smooth: true,
   loop: true,
 });
@@ -182,7 +182,7 @@ const mybutton = document.querySelector(".top-btn");
 const show = document.querySelector(".active")
 
 window.addEventListener("scroll", function () {
-  if (window.scrollY > 100) {
+  if (window.scrollY > 900) {
     mybutton.classList.add("active")
   }
   else {
