@@ -80,7 +80,9 @@
         width: 458px;
     }
         #quality .swiper-slide-active {
-            filter: blur(0px);
             padding-bottom: 20px;
         }
+                #quality .swiper-slide {
+                    padding-bottom: 20px;
+                }
 }
